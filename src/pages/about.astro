@@ -10,12 +10,25 @@ import Footer from '../components/Footer.astro';
 >
   <Nav />
 
-  <!-- Hero -->
-  <section class="min-h-[50vh] flex flex-col justify-end px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto">
-    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">About</p>
-    <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
-      POWERING THE AI ERA<br />FROM THE GROUND DOWN.
-    </h1>
+  <!-- Hero — full bleed tunnel image -->
+  <section class="relative min-h-[75vh] flex flex-col justify-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/about-hero.jpg"
+        alt="LurraCore underground tunnel infrastructure"
+        class="w-full h-full object-cover object-center"
+      />
+      <!-- Top fade protects nav -->
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.40) 20%, transparent 50%);"></div>
+      <!-- Bottom fade lifts text -->
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.60) 35%, transparent 60%);"></div>
+    </div>
+    <div class="relative px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto w-full">
+      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">About</p>
+      <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+        POWERING THE AI ERA<br />FROM THE GROUND DOWN.
+      </h1>
+    </div>
   </section>
 
   <div class="border-t border-rule mx-8 md:mx-12"></div>
