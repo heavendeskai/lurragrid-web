@@ -115,3 +115,21 @@ a {
 .rule-line {
   border-color: var(--rule);
 }
+
+/* Hero background texture */
+.hero-bg {
+  background-image: 
+    linear-gradient(rgba(0,68,170,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,68,170,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Subtle page background — not pure void black */
+body {
+  background-color: #080C14;
+}
+
+/* Section alternation for depth */
+.section-alt {
+  background-color: #0A0E18;
+}
