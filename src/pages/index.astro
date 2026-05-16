@@ -8,69 +8,81 @@ import HeroSVG from '../components/HeroSVG.astro';
 <Base title="LurraGrid — Powering the AI Era from the Ground Down">
   <Nav />
 
-<!-- HERO -->
-  <section class="hero-section min-h-screen relative flex items-center overflow-hidden">
-    <!-- Background subtle geological grid texture -->
-    <div class="hero-bg absolute inset-0 pointer-events-none"></div>
-    <!-- Blue glow from below suggests underground depth -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-64 pointer-events-none" style="background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(0,68,170,0.18) 0%, transparent 70%);"></div>
-    <!-- Horizontal rule at surface level -->
-    <div class="absolute top-[42%] left-0 right-0 h-px pointer-events-none" style="background: linear-gradient(90deg, transparent, rgba(0,68,170,0.25) 20%, rgba(0,85,204,0.4) 50%, rgba(0,68,170,0.25) 80%, transparent);"></div>
+<!-- HERO — full bleed shaft image -->
+  <section class="hero-section min-h-screen relative flex items-center justify-center overflow-hidden">
 
-    <!-- Full-width content grid -->
-    <div class="relative w-full px-12 md:px-20 pt-32 pb-20">
-      <div class="grid grid-cols-12 gap-6 items-center min-h-[80vh]">
+    <!-- Background: the shaft -->
+    <div class="absolute inset-0">
+      <img
+        src="/hero-shaft.jpg"
+        alt="LurraCore mine shaft looking down 3,500 feet"
+        class="w-full h-full object-cover object-center hero-zoom"
+      />
+      <!-- Top protection for nav -->
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.30) 15%, transparent 40%);"></div>
+      <!-- Bottom darkening for text -->
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.50) 30%, transparent 60%);"></div>
+      <!-- Subtle vignette around edges -->
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%);"></div>
+    </div>
 
-        <!-- Left text: cols 1-6 -->
-        <div class="col-span-12 md:col-span-6 lg:col-span-5">
-          <p class="font-body text-xs tracking-[0.35em] uppercase text-royal mb-8 animate-fade-up">
-            Underground Pumped Hydro Storage
-          </p>
-          <h1 class="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[0.95] text-frost mb-8 animate-fade-up-delay-1">
-            POWERING<br/>THE AI ERA<br/><span style="color:#0044AA">FROM THE</span><br/>GROUND DOWN.
-          </h1>
-          <p class="font-body text-base md:text-lg text-frost-dim leading-relaxed mb-10 max-w-lg animate-fade-up-delay-2">
-            We convert abandoned hard rock mines into firm, dispatchable underground power infrastructure for AI compute — delivered directly behind the meter.
-          </p>
-          <div class="flex flex-wrap gap-4 animate-fade-up-delay-3">
-            <a
-              href="/contact"
-              class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300"
-            >
-              Partner Inquiries
-            </a>
-            <a
-              href="/platform"
-              class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 border border-frost-dim text-frost-dim hover:text-frost hover:border-frost transition-colors duration-300"
-            >
-              The Technology
-            </a>
-          </div>
+    <!-- Pulsing ring overlay — energy rising from below -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="pulse-ring ring-1"></div>
+      <div class="pulse-ring ring-2"></div>
+      <div class="pulse-ring ring-3"></div>
+    </div>
 
-          <!-- Stats strip -->
-          <div class="grid grid-cols-3 gap-6 mt-16 pt-10 border-t border-rule animate-fade-up-delay-3">
-            <div>
-              <p class="font-display font-bold text-3xl text-frost">950</p>
-              <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">Pre-Screened Sites</p>
-            </div>
-            <div>
-              <p class="font-display font-bold text-3xl text-frost">15</p>
-              <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">States</p>
-            </div>
-            <div>
-              <p class="font-display font-bold text-3xl text-frost">50yr</p>
-              <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">Asset Life</p>
-            </div>
-          </div>
+    <!-- Centered text over the shaft -->
+    <div class="relative text-center px-8 md:px-12 pt-32 pb-20 max-w-5xl mx-auto w-full flex flex-col items-center justify-center min-h-screen">
+      <p class="font-body text-xs tracking-[0.4em] uppercase text-royal mb-8 animate-fade-up">
+        Underground Pumped Hydro Storage
+      </p>
+      <h1 class="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-frost mb-8 animate-fade-up-delay-1">
+        POWERING<br/>THE AI ERA<br/><span style="color:#0044AA">FROM THE</span><br/>GROUND DOWN.
+      </h1>
+      <p class="font-body text-lg text-frost-dim leading-relaxed mb-10 max-w-2xl animate-fade-up-delay-2">
+        We convert abandoned hard rock mines into firm, dispatchable underground power infrastructure for AI compute — delivered directly behind the meter.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center animate-fade-up-delay-3">
+        <a href="/contact" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300">
+          Partner Inquiries
+        </a>
+        <a href="/platform" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 border border-frost-dim text-frost-dim hover:text-frost hover:border-frost transition-colors duration-300">
+          The Technology
+        </a>
+      </div>
+
+      <!-- Stats strip at bottom -->
+      <div class="grid grid-cols-3 gap-12 mt-20 pt-10 border-t border-rule w-full max-w-lg animate-fade-up-delay-3">
+        <div>
+          <p class="font-display font-bold text-3xl text-frost">950</p>
+          <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">Sites</p>
         </div>
-
-        <!-- Right SVG: cols 7-12 -->
-        <div class="col-span-12 md:col-span-6 lg:col-span-7 flex items-center justify-center lg:justify-end">
-          <div class="w-full max-w-2xl lg:max-w-none">
-            <HeroSVG />
-          </div>
+        <div>
+          <p class="font-display font-bold text-3xl text-frost">15</p>
+          <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">States</p>
         </div>
+        <div>
+          <p class="font-display font-bold text-3xl text-frost">50yr</p>
+          <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">Asset Life</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- SVG DIAGRAM SECTION — below hero -->
+  <section class="py-24 px-8 md:px-12 border-t border-rule">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4">How It Works</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">The Mine Is the Battery.</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed">
+          Water stored in the upper reservoir falls through the shaft, drives a turbine at depth, and is pumped back overnight using curtailed renewable energy. Energy stored as potential head. Power delivered firm, on demand, behind the meter.
+        </p>
+      </div>
+      <div>
+        <HeroSVG />
       </div>
     </div>
   </section>

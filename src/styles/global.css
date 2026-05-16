@@ -133,3 +133,33 @@ body {
 .section-alt {
   background-color: #0A0E18;
 }
+
+/* ── Hero shaft image animations ── */
+
+/* Slow zoom — 30s loop, barely perceptible */
+@keyframes heroZoom {
+  0%   { transform: scale(1.0); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1.0); }
+}
+.hero-zoom {
+  animation: heroZoom 30s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Pulsing rings — energy rising from the reservoir */
+.pulse-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 85, 204, 0.4);
+  animation: ringPulse 4s ease-out infinite;
+}
+.ring-1 { width: 200px; height: 200px; animation-delay: 0s; }
+.ring-2 { width: 200px; height: 200px; animation-delay: 1.3s; }
+.ring-3 { width: 200px; height: 200px; animation-delay: 2.6s; }
+
+@keyframes ringPulse {
+  0%   { transform: scale(0.5); opacity: 0.8; border-color: rgba(0,85,204,0.6); }
+  70%  { transform: scale(4);   opacity: 0.15; }
+  100% { transform: scale(5);   opacity: 0; }
+}
