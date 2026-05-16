@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="404 — LurraGrid">
+  <Nav />
+
+  <section class="min-h-screen flex flex-col items-center justify-center px-8 text-center">
+    <p class="font-display font-bold text-8xl text-rule mb-4">404</p>
+    <h1 class="font-display font-bold text-3xl text-frost mb-4">Page not found.</h1>
+    <p class="font-body text-base text-frost-dim mb-10">This depth hasn't been mapped yet.</p>
+    <a
+      href="/"
+      class="font-display font-bold text-sm tracking-widest uppercase px-8 py-3 bg-royal text-frost hover:bg-royal-light transition-colors duration-300"
+    >
+      Return to Surface
+    </a>
+  </section>
+
+  <Footer />
+</Base>

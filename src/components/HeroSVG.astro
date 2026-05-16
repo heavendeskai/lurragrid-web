@@ -1,0 +1,122 @@
+---
+---
+
+<div class="hero-svg-container w-full max-w-2xl mx-auto">
+  <svg
+    viewBox="0 0 600 700"
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-full h-auto svg-draw"
+    role="img"
+    aria-label="LurraCore underground cross-section diagram"
+  >
+    <!-- Grid / terrain texture -->
+    <defs>
+      <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0044AA" stroke-width="0.3" opacity="0.15"/>
+      </pattern>
+      <linearGradient id="shaftGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0044AA" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#0044AA" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="waterGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#0055CC" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#003388" stop-opacity="0.4"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Background grid -->
+    <rect width="600" height="700" fill="url(#grid)" opacity="0.5"/>
+
+    <!-- === SURFACE LINE === -->
+    <!-- Ground surface -->
+    <line x1="0" y1="80" x2="600" y2="80" stroke="#F5F7FA" stroke-width="1.5" class="delay-1"/>
+    <!-- Surface label -->
+    <text x="10" y="72" fill="#A0A8B5" font-size="9" font-family="Inter, sans-serif" letter-spacing="2" class="delay-1" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.3s ease forwards;opacity:0">SURFACE</text>
+
+    <!-- Terrain hatch marks left -->
+    <line x1="0" y1="80" x2="160" y2="80" stroke="#F5F7FA" stroke-width="0.5" opacity="0.3" class="delay-1"/>
+    <line x1="440" y1="80" x2="600" y2="80" stroke="#F5F7FA" stroke-width="0.5" opacity="0.3" class="delay-1"/>
+
+    <!-- Headframe left shaft -->
+    <line x1="200" y1="20" x2="200" y2="80" stroke="#0055CC" stroke-width="1.5" class="delay-1"/>
+    <line x1="170" y1="80" x2="230" y2="80" stroke="#0055CC" stroke-width="2" class="delay-1"/>
+    <line x1="185" y1="20" x2="200" y2="40" stroke="#0055CC" stroke-width="1" class="delay-1"/>
+    <line x1="215" y1="20" x2="200" y2="40" stroke="#0055CC" stroke-width="1" class="delay-1"/>
+    <!-- Label: INTAKE SHAFT -->
+    <text x="135" y="15" fill="#A0A8B5" font-size="8" font-family="Inter, sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.5s ease forwards;opacity:0">INTAKE SHAFT</text>
+
+    <!-- Headframe right shaft -->
+    <line x1="400" y1="20" x2="400" y2="80" stroke="#0055CC" stroke-width="1.5" class="delay-2"/>
+    <line x1="370" y1="80" x2="430" y2="80" stroke="#0055CC" stroke-width="2" class="delay-2"/>
+    <line x1="385" y1="20" x2="400" y2="40" stroke="#0055CC" stroke-width="1" class="delay-2"/>
+    <line x1="415" y1="20" x2="400" y2="40" stroke="#0055CC" stroke-width="1" class="delay-2"/>
+    <!-- Label: RETURN SHAFT -->
+    <text x="340" y="15" fill="#A0A8B5" font-size="8" font-family="Inter, sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.5s ease forwards;opacity:0">RETURN SHAFT</text>
+
+    <!-- === LEFT SHAFT (Main) === -->
+    <rect x="185" y="80" width="30" height="280" fill="url(#shaftGrad)" stroke="#0044AA" stroke-width="1" class="delay-2"/>
+    <!-- Shaft depth markers -->
+    <line x1="160" y1="180" x2="185" y2="180" stroke="#0044AA" stroke-width="0.5" class="delay-2"/>
+    <text x="120" y="184" fill="#A0A8B5" font-size="8" font-family="Inter, sans-serif" letter-spacing="1" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.2s ease forwards;opacity:0">1,000 ft</text>
+    <line x1="160" y1="280" x2="185" y2="280" stroke="#0044AA" stroke-width="0.5" class="delay-3"/>
+    <text x="120" y="284" fill="#A0A8B5" font-size="8" font-family="Inter, sans-serif" letter-spacing="1" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.4s ease forwards;opacity:0">2,500 ft</text>
+
+    <!-- === RIGHT SHAFT === -->
+    <rect x="385" y="80" width="30" height="430" fill="url(#shaftGrad)" stroke="#0044AA" stroke-width="1" class="delay-3"/>
+
+    <!-- === UPPER RESERVOIR === -->
+    <rect x="100" y="360" width="280" height="90" rx="4" fill="#0044AA" fill-opacity="0.12" stroke="#0044AA" stroke-width="1.5" class="delay-3"/>
+    <!-- Water fill animation -->
+    <rect x="102" y="400" width="276" height="48" rx="3" fill="url(#waterGrad)" fill-opacity="0.6" class="delay-4"/>
+    <!-- Water surface line -->
+    <line x1="102" y1="400" x2="378" y2="400" stroke="#0055CC" stroke-width="1" stroke-dasharray="4,3" class="delay-4"/>
+    <!-- Label -->
+    <text x="190" y="352" fill="#A0A8B5" font-size="8" font-family="Inter, sans-serif" letter-spacing="2" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.6s ease forwards;opacity:0">UPPER RESERVOIR</text>
+    <text x="195" y="392" fill="#0055CC" font-size="9" font-family="Inter, sans-serif" letter-spacing="1" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.7s ease forwards;opacity:0">700,000 m³</text>
+
+    <!-- === CONNECTING PENSTOCK === -->
+    <line x1="215" y1="450" x2="215" y2="510" stroke="#0055CC" stroke-width="3" class="delay-4"/>
+    <line x1="385" y1="450" x2="385" y2="510" stroke="#0055CC" stroke-width="1" class="delay-4"/>
+    <!-- Flow arrows -->
+    <polygon points="210,490 220,490 215,505" fill="#0055CC" class="delay-5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.3s 1.8s ease forwards;opacity:0"/>
+
+    <!-- === TURBINE / PUMP STATION === -->
+    <rect x="155" y="510" width="130" height="60" rx="6" fill="#0044AA" fill-opacity="0.2" stroke="#0055CC" stroke-width="1.5" class="delay-5"/>
+    <!-- Turbine symbol -->
+    <circle cx="220" cy="540" r="18" fill="none" stroke="#0055CC" stroke-width="1.5" class="delay-5"/>
+    <line x1="220" y1="522" x2="220" y2="558" stroke="#0055CC" stroke-width="1" class="delay-5"/>
+    <line x1="202" y1="540" x2="238" y2="540" stroke="#0055CC" stroke-width="1" class="delay-5"/>
+    <line x1="207" y1="527" x2="233" y2="553" stroke="#0055CC" stroke-width="0.8" class="delay-5"/>
+    <line x1="207" y1="553" x2="233" y2="527" stroke="#0055CC" stroke-width="0.8" class="delay-5"/>
+    <!-- Label -->
+    <text x="172" y="505" fill="#A0A8B5" font-size="8" font-family="Inter, sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2s ease forwards;opacity:0">TURBINE / PUMP</text>
+
+    <!-- === LOWER RESERVOIR === -->
+    <rect x="100" y="590" width="280" height="90" rx="4" fill="#0044AA" fill-opacity="0.12" stroke="#0044AA" stroke-width="1.5" class="delay-5"/>
+    <!-- Water fill -->
+    <rect x="102" y="592" width="276" height="50" rx="3" fill="url(#waterGrad)" fill-opacity="0.3" class="delay-6"/>
+    <!-- Label -->
+    <text x="190" y="698" fill="#A0A8B5" font-size="8" font-family="Inter, sans-serif" letter-spacing="2" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.2s ease forwards;opacity:0">LOWER RESERVOIR</text>
+
+    <!-- === POWER OUTPUT LINE (right side) === -->
+    <line x1="415" y1="540" x2="530" y2="540" stroke="#F5F7FA" stroke-width="1" stroke-dasharray="5,3" class="delay-5"/>
+    <line x1="530" y1="540" x2="530" y2="460" stroke="#F5F7FA" stroke-width="1" stroke-dasharray="5,3" class="delay-5"/>
+    <!-- Power icon -->
+    <circle cx="530" cy="445" r="15" fill="none" stroke="#F5F7FA" stroke-width="1" class="delay-6"/>
+    <text x="524" y="450" fill="#F5F7FA" font-size="12" font-family="Inter, sans-serif" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.3s ease forwards;opacity:0">⚡</text>
+    <text x="497" y="430" fill="#A0A8B5" font-size="7" font-family="Inter, sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.4s ease forwards;opacity:0">BTM OUTPUT</text>
+
+    <!-- Depth indicator bar -->
+    <line x1="570" y1="80" x2="570" y2="680" stroke="#0044AA" stroke-width="0.5" class="delay-2"/>
+    <line x1="560" y1="80" x2="580" y2="80" stroke="#0044AA" stroke-width="0.5" class="delay-2"/>
+    <line x1="560" y1="680" x2="580" y2="680" stroke="#0044AA" stroke-width="0.5" class="delay-6"/>
+    <text x="576" y="385" fill="#A0A8B5" font-size="7" font-family="Inter, sans-serif" letter-spacing="1" transform="rotate(90, 576, 385)" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2s ease forwards;opacity:0">3,500 ft DEPTH</text>
+  </svg>
+</div>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>

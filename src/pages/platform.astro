@@ -1,0 +1,132 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const layers = [
+  {
+    num: '01',
+    name: 'LurraCore',
+    tag: 'Underground Storage & Dispatch',
+    body: `The mine is the battery. Existing hard rock shafts and cavity networks become upper and lower reservoirs. Water flows from upper to lower through a turbine to generate power. Pumped back up overnight to recharge. No new excavation required. The civil engineering is already done — we commission it.`,
+    detail: `Round-trip efficiency: 80%. Asset life: 50 years. Firm, dispatchable power delivered directly behind the meter to the data center load.`,
+  },
+  {
+    num: '02',
+    name: 'LurraCascade',
+    tag: 'Patent-Pending Continuity System',
+    body: `Conventional pumped hydro stops when the upper reservoir empties. LurraCascade eliminates that constraint. A dual-reservoir threshold switching system automatically engages a secondary cascade stage at 20% reservoir level, maintaining uninterrupted power delivery.`,
+    detail: `Prior art published May 5, 2026, CERN Zenodo, DOI 10.5281/zenodo.20045602. USPTO provisional filing in process. Four independent claims: the method, the system, the BTM data center application, and the automated threshold actuator.`,
+    patent: true,
+  },
+  {
+    num: '03',
+    name: 'LurraCharge',
+    tag: 'Curtailed Energy Recharge Layer',
+    body: `Wind and nuclear cannot throttle overnight. Grid operators log millions of megawatt-hours of curtailed generation annually — energy the market cannot absorb. LurraCharge acquires this energy at near-zero or negative cost through negotiated power purchase agreements. The recharge window is 8–10 hours overnight.`,
+    detail: `MISO territory alone logs over 1.5 million MWh of curtailed wind annually. Negative LMP pricing events are documented and recurring.`,
+  },
+  {
+    num: '04',
+    name: 'LurraBridge',
+    tag: 'Sub-100ms Frequency Response',
+    body: `An EV battery bridge layer provides sub-100ms frequency response for grid interconnection requirements. LurraBridge handles the instantaneous demand while LurraCore ramps to full output — meeting both the speed of grid ancillary services and the endurance of a 14–16 hour dispatch window.`,
+    detail: `Critical for BTM data center applications where uninterrupted power is a contractual requirement.`,
+  },
+  {
+    num: '05',
+    name: 'LurraPDA',
+    tag: '20-Year Take-or-Pay Power Delivery Agreement',
+    body: `LurraGrid delivers power under long-term Power Delivery Agreements — 20-year take-or-pay contracts negotiated directly with data center operators. The data center commits to taking minimum volumes. LurraGrid commits to firm delivery. Price certainty. Supply certainty. Infrastructure-grade contract structure.`,
+    detail: `Structured as behind-the-meter delivery, avoiding grid interconnection queues. Project-level debt is secured against PDA cash flows — investors never personally guarantee construction debt.`,
+  },
+  {
+    num: '06',
+    name: 'LurraAtlas',
+    tag: '950 Pre-Screened Sites Across 15 States',
+    body: `Abandoned hard rock mines are not scarce. The United States holds thousands of them across the western and upper midwest mining belts. LurraAtlas is our proprietary site screening database: 950 sites evaluated across 15 states against head, depth, geometry, hydrogeology, transmission access, and proximity to data center demand corridors.`,
+    detail: `Screening criteria include: minimum net head 300m, minimum depth 1,000 ft, suitable cavity geometry, proximity to transmission, and viable groundwater management pathway.`,
+  },
+];
+---
+
+<Base
+  title="Platform — LurraGrid"
+  description="The LurraGrid technology architecture: LurraCore, LurraCascade, LurraCharge, LurraBridge, LurraPDA, and LurraAtlas."
+>
+  <Nav />
+
+  <!-- Hero -->
+  <section class="min-h-[60vh] flex flex-col justify-end px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto">
+    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">The Technology</p>
+    <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+      THE MINE IS<br />THE BATTERY.
+    </h1>
+    <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
+      LurraGrid is an energy arbitrage platform: acquire curtailed renewables at near-zero cost, deliver firm dispatchable power at premium behind-the-meter rates. Six integrated layers. One platform.
+    </p>
+  </section>
+
+  <div class="border-t border-rule mx-8 md:mx-12"></div>
+
+  <!-- Platform Layers -->
+  {layers.map((layer, i) => (
+    <section class={`py-20 px-8 md:px-12 max-w-7xl mx-auto reveal ${i < layers.length - 1 ? 'border-b border-rule' : ''}`}>
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        <!-- Number -->
+        <div class="md:col-span-1">
+          <span class="font-display font-bold text-5xl text-rule">{layer.num}</span>
+        </div>
+        <!-- Content -->
+        <div class="md:col-span-5">
+          <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-3">{layer.tag}</p>
+          <h2 class="font-display font-bold text-3xl text-frost mb-6 flex items-center gap-3">
+            {layer.name}
+            {layer.patent && (
+              <span class="text-xs font-body tracking-widest uppercase border border-royal text-royal px-2 py-1 align-middle">Patent Pending</span>
+            )}
+          </h2>
+          <p class="font-body text-base text-frost-dim leading-relaxed">{layer.body}</p>
+        </div>
+        <!-- Detail -->
+        <div class="md:col-span-5 md:col-start-8">
+          <div class="border-l-2 border-royal pl-6">
+            <p class="font-body text-sm text-frost-dim leading-relaxed">{layer.detail}</p>
+            {layer.patent && (
+              <a
+                href="https://zenodo.org/doi/10.5281/zenodo.20045602"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block mt-4 font-body text-xs tracking-widest uppercase text-royal hover:text-royal-light transition-colors duration-300"
+              >
+                View Prior Art Publication ↗
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Physics note -->
+  <section class="py-20 px-8 md:px-12 max-w-7xl mx-auto reveal">
+    <div class="bg-rule p-10 md:p-14">
+      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4">The Physics</p>
+      <p class="font-display font-bold text-xl md:text-2xl text-frost leading-snug max-w-3xl">
+        LurraCore is a storage and dispatch machine — not perpetual motion. Every megawatt delivered to the data center requires approximately 1.25 MW of LurraCharge input at 80% round-trip efficiency. The business works because the input-to-output cost spread is four to five times.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-8 md:px-12 text-center reveal">
+    <a
+      href="/sites"
+      class="inline-block font-display font-bold text-sm tracking-widest uppercase px-10 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300"
+    >
+      View the Site Portfolio →
+    </a>
+  </section>
+
+  <Footer />
+</Base>

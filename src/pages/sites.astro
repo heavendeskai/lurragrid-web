@@ -1,0 +1,161 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const nodes = [
+  {
+    id: '001',
+    name: 'Mather B',
+    location: 'Negaunee, Marquette County, Michigan',
+    ore: 'Hard Rock Iron Ore',
+    depth: '3,500 ft',
+    phase: 'Phase 1 — Anchor Site',
+    status: 'active',
+    notes: [
+      'MTU PUSH 3-year peer-reviewed feasibility study',
+      'Alfred P. Sloan Foundation funded research',
+      'Full SolidWorks 3D mine geometry model complete',
+      'Municipal ownership structure confirmed',
+      '50-year asset life',
+    ],
+  },
+  {
+    id: '002',
+    name: 'Quincy',
+    location: 'Hancock, Houghton County, Michigan',
+    ore: 'Hard Rock Copper',
+    depth: '6,200 ft — World Record Depth',
+    phase: 'Phase 2',
+    status: 'upcoming',
+    notes: [
+      'World record mine depth unlocks exceptional head pressure',
+      'Extraordinary potential energy density per unit volume',
+      'Upper Michigan copper heritage district',
+      'Validation budget allocated',
+    ],
+  },
+  {
+    id: '003',
+    name: 'Comstock',
+    location: 'Virginia City, Storey County, Nevada',
+    ore: 'Hard Rock Silver & Gold',
+    depth: '3,360 ft',
+    phase: 'Phase 3',
+    status: 'upcoming',
+    notes: [
+      'Reno data center demand corridor proximity',
+      'Nevada regulatory environment',
+      'Historic silver and gold mining district',
+      'Validation budget allocated',
+    ],
+  },
+];
+
+const screeningCriteria = [
+  { label: 'Hydraulic Head', value: 'Minimum 300m net head required for economic generation' },
+  { label: 'Mine Depth', value: 'Minimum 1,000 ft — deep shafts provide natural head advantage' },
+  { label: 'Cavity Geometry', value: 'Sufficient volume for dual-reservoir storage at economic scale' },
+  { label: 'Hydrogeology', value: 'Groundwater management viability and water source analysis' },
+  { label: 'Transmission', value: 'Proximity to grid interconnection or direct BTM customer load' },
+  { label: 'Ownership', value: 'Clear title structure — municipal, state, or federal mine owners preferred' },
+];
+---
+
+<Base
+  title="Sites — LurraGrid"
+  description="LurraGrid's three LurraNode sites: Mather B Michigan, Quincy Michigan, Comstock Nevada."
+>
+  <Nav />
+
+  <!-- Hero -->
+  <section class="min-h-[50vh] flex flex-col justify-end px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto">
+    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">The Portfolio</p>
+    <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+      THREE LURRANODES.<br />ONE PLATFORM.
+    </h1>
+    <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
+      Each LurraNode is an operating hard rock mine converted into a LurraCore underground pumped hydro power plant. Screened from 950 pre-qualified sites across 15 states.
+    </p>
+  </section>
+
+  <div class="border-t border-rule mx-8 md:mx-12"></div>
+
+  <!-- Site Cards -->
+  {nodes.map((node, i) => (
+    <section class={`py-20 px-8 md:px-12 max-w-7xl mx-auto reveal ${i < nodes.length - 1 ? 'border-b border-rule' : ''}`}>
+      <div class="grid md:grid-cols-12 gap-8">
+        <!-- Left -->
+        <div class="md:col-span-4">
+          <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-2">LurraNode {node.id}</p>
+          <h2 class="font-display font-bold text-4xl text-frost mb-2">{node.name}</h2>
+          <p class="font-body text-sm text-frost-dim mb-1">{node.location}</p>
+          <p class="font-body text-sm text-frost-dim mb-6">{node.ore}</p>
+          
+          <div class="space-y-2 mb-6">
+            <div class="flex gap-3">
+              <span class="font-body text-xs text-frost-dim w-20 shrink-0">Depth</span>
+              <span class="font-body text-xs text-frost">{node.depth}</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="font-body text-xs text-frost-dim w-20 shrink-0">Status</span>
+              <span class="font-body text-xs text-frost">{node.phase}</span>
+            </div>
+          </div>
+
+          {node.status === 'active' ? (
+            <span class="inline-block text-xs tracking-widest uppercase border border-royal text-royal px-3 py-1">Phase 1 Active</span>
+          ) : (
+            <span class="inline-block text-xs tracking-widest uppercase border border-rule text-frost-dim px-3 py-1">{node.phase}</span>
+          )}
+        </div>
+
+        <!-- Right: notes -->
+        <div class="md:col-span-6 md:col-start-7">
+          <ul class="space-y-4">
+            {node.notes.map(note => (
+              <li class="flex gap-4 items-start">
+                <span class="w-4 h-4 mt-0.5 shrink-0 border border-royal flex items-center justify-center">
+                  <span class="w-1.5 h-1.5 bg-royal block"></span>
+                </span>
+                <span class="font-body text-sm text-frost-dim leading-relaxed">{note}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- Atlas section -->
+  <section class="py-32 px-8 md:px-12 max-w-7xl mx-auto reveal">
+    <div class="mb-12">
+      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4">LurraAtlas</p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-4">950 Pre-Screened Sites.<br />15 States.</h2>
+      <p class="font-body text-base text-frost-dim max-w-2xl leading-relaxed">
+        Abandoned hard rock mines are not scarce. The United States holds thousands across western and upper midwest mining belts. LurraAtlas is our proprietary site database, evaluating each candidate against six critical criteria.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule">
+      {screeningCriteria.map(c => (
+        <div class="bg-void p-8">
+          <p class="font-body text-xs tracking-widest uppercase text-royal mb-3">{c.label}</p>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">{c.value}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-8 md:px-12 text-center reveal">
+    <a
+      href="/contact"
+      class="inline-block font-display font-bold text-sm tracking-widest uppercase px-10 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300"
+    >
+      Municipal Partner Inquiries →
+    </a>
+  </section>
+
+  <Footer />
+</Base>

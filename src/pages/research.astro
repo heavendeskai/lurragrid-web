@@ -1,0 +1,134 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Research — LurraGrid"
+  description="LurraGrid's academic foundation: MTU PUSH program, Alfred P. Sloan Foundation, and the LurraCascade patent-pending continuity system."
+>
+  <Nav />
+
+  <!-- Hero -->
+  <section class="min-h-[50vh] flex flex-col justify-end px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto">
+    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">Academic Foundation</p>
+    <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+      PEER-REVIEWED<br />FOUNDATION.
+    </h1>
+    <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
+      LurraGrid is built on three years of multidisciplinary research. Not a concept. Not a simulation. A validated system with published prior art and a peer-reviewed engineering model.
+    </p>
+  </section>
+
+  <div class="border-t border-rule mx-8 md:mx-12"></div>
+
+  <!-- MTU PUSH -->
+  <section class="py-24 px-8 md:px-12 max-w-7xl mx-auto reveal border-b border-rule">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-display font-bold text-8xl text-rule">01</span>
+      </div>
+      <div class="md:col-span-8">
+        <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-4">Michigan Technological University</p>
+        <h2 class="font-display font-bold text-3xl text-frost mb-6">MTU PUSH Program</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          The MTU Pumped Underground Storage Hydropower (PUSH) program conducted a three-year, multidisciplinary feasibility study of underground pumped hydro storage in the historic Mather B mine complex in Negaunee, Michigan. The program assembled specialists across mechanical engineering, hydrology, industrial archaeology, energy law, policy research, and mine geometry.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          The study included a full SolidWorks three-dimensional geometric model of the Mather B mine complex, hydrological analysis, legal and regulatory review, power market analysis, and community acceptance research. The team's findings confirmed the technical and commercial viability of the site.
+        </p>
+        <div class="border-l-2 border-royal pl-6">
+          <p class="font-body text-sm text-frost leading-relaxed">
+            The MTU PUSH team are original researchers and inventors. LurraGrid is the commercial application of their published work. They collaborate — LurraGrid does not direct them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sloan -->
+  <section class="py-24 px-8 md:px-12 max-w-7xl mx-auto reveal border-b border-rule">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-display font-bold text-8xl text-rule">02</span>
+      </div>
+      <div class="md:col-span-8">
+        <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-4">Institutional Funding</p>
+        <h2 class="font-display font-bold text-3xl text-frost mb-6">Alfred P. Sloan Foundation</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          The foundational research was funded by the Alfred P. Sloan Foundation under Grant G-2018-11305. The Sloan Foundation is one of the United States' most respected philanthropic institutions, with a long history of funding rigorous scientific and engineering research.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed">
+          Sloan funding is competitive, peer-reviewed at the grant level, and signals institutional confidence in the research team and thesis. The award covers the full three-year MTU PUSH study period.
+        </p>
+        <div class="mt-6 p-6 border border-rule">
+          <p class="font-body text-xs tracking-widest uppercase text-frost-dim mb-1">Grant Reference</p>
+          <p class="font-display font-bold text-frost">G-2018-11305</p>
+          <p class="font-body text-sm text-frost-dim mt-1">Alfred P. Sloan Foundation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LurraCascade patent -->
+  <section class="py-24 px-8 md:px-12 max-w-7xl mx-auto reveal">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <span class="font-display font-bold text-8xl text-rule">03</span>
+      </div>
+      <div class="md:col-span-8">
+        <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-4">Patent Pending</p>
+        <h2 class="font-display font-bold text-3xl text-frost mb-2 flex items-center gap-4 flex-wrap">
+          LurraCascade Continuity System
+          <span class="text-xs font-body tracking-widest uppercase border border-royal text-royal px-2 py-1">Patent Pending</span>
+        </h2>
+        <p class="font-body text-sm text-frost-dim mb-8">USPTO Provisional Filing in Process</p>
+        
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          The LurraCascade Continuity System solves the fundamental interruption problem in conventional underground pumped hydro: power delivery stops when the upper reservoir empties. LurraCascade uses a dual-reservoir threshold switching method to maintain continuous generation by automatically engaging a cascade stage at 20% reservoir level.
+        </p>
+
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-8">
+          Four independent patent claims are in process: the method, the system architecture, the behind-the-meter data center application, and the automated threshold actuator mechanism.
+        </p>
+
+        <div class="border border-rule p-8 mb-8">
+          <p class="font-body text-xs tracking-widest uppercase text-frost-dim mb-4">Prior Art Publication</p>
+          <div class="space-y-2">
+            <div class="flex gap-4">
+              <span class="font-body text-xs text-frost-dim w-24 shrink-0">Published</span>
+              <span class="font-body text-sm text-frost">May 5, 2026</span>
+            </div>
+            <div class="flex gap-4">
+              <span class="font-body text-xs text-frost-dim w-24 shrink-0">Repository</span>
+              <span class="font-body text-sm text-frost">CERN Zenodo</span>
+            </div>
+            <div class="flex gap-4">
+              <span class="font-body text-xs text-frost-dim w-24 shrink-0">DOI</span>
+              <a
+                href="https://zenodo.org/doi/10.5281/zenodo.20045602"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-body text-sm text-royal hover:text-royal-light transition-colors duration-300"
+              >
+                10.5281/zenodo.20045602 ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="https://zenodo.org/doi/10.5281/zenodo.20045602"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-display font-bold text-sm tracking-widest uppercase px-8 py-3 border border-royal text-royal hover:bg-royal hover:text-frost transition-colors duration-300"
+        >
+          View Publication on Zenodo ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>

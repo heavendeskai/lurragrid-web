@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Privacy Policy — LurraGrid">
+  <Nav />
+
+  <section class="pt-40 pb-20 px-8 md:px-12 max-w-3xl mx-auto">
+    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6">Legal</p>
+    <h1 class="font-display font-bold text-4xl text-frost mb-12">Privacy Policy</h1>
+    
+    <div class="space-y-8 font-body text-sm text-frost-dim leading-relaxed">
+      <p class="text-xs text-frost-dim">Last updated: May 2026</p>
+
+      <div>
+        <h2 class="font-display font-bold text-lg text-frost mb-3">Information We Collect</h2>
+        <p>When you submit an inquiry through our contact form, we collect the information you provide: your name, organization, email address, inquiry type, and message. We do not collect any additional information automatically beyond basic analytics data described below.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-lg text-frost mb-3">Analytics</h2>
+        <p>This website uses Plausible Analytics, a privacy-respecting analytics service. Plausible does not use cookies, does not collect personal data, and does not track you across websites. The data collected is fully anonymized and used only to understand aggregate traffic patterns. No cookie consent banner is required because no cookies are set.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-lg text-frost mb-3">How We Use Your Information</h2>
+        <p>We use the information you submit through our contact form only to respond to your inquiry. We do not sell, share, or distribute your personal information to third parties. We do not add you to marketing lists without your explicit consent.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-lg text-frost mb-3">Data Storage</h2>
+        <p>Contact form submissions are processed through Netlify Forms and stored securely. You may request deletion of your submitted data at any time by contacting us at ja@lurragrid.com.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display font-bold text-lg text-frost mb-3">Contact</h2>
+        <p>For any privacy-related questions, contact us at <a href="mailto:ja@lurragrid.com" class="text-royal hover:text-royal-light transition-colors">ja@lurragrid.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
