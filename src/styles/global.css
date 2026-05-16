@@ -163,3 +163,68 @@ body {
   70%  { transform: scale(4);   opacity: 0.15; }
   100% { transform: scale(5);   opacity: 0; }
 }
+
+/* ── Section background system ── */
+.section-blue-deep {
+  background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(0,40,100,0.18) 0%, transparent 70%), #05080F;
+}
+.section-blue-mid {
+  background: radial-gradient(ellipse 60% 80% at 80% 30%, rgba(0,55,140,0.15) 0%, transparent 65%), #070B14;
+}
+.section-orange-accent {
+  background: radial-gradient(ellipse 50% 60% at 100% 50%, rgba(180,80,0,0.10) 0%, transparent 60%),
+              radial-gradient(ellipse 40% 40% at 0% 80%, rgba(0,50,120,0.12) 0%, transparent 60%), #060A12;
+}
+.section-cta {
+  background: radial-gradient(ellipse 70% 80% at 50% 100%, rgba(0,68,170,0.20) 0%, transparent 65%),
+              radial-gradient(ellipse 40% 40% at 90% 10%, rgba(200,90,0,0.08) 0%, transparent 50%), #050810;
+}
+
+/* Gradient rule lines */
+.rule-gradient {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,68,170,0.5) 30%, rgba(255,120,0,0.3) 70%, transparent);
+}
+
+/* Eyebrow text over images — brighter blue */
+.eyebrow-over-image {
+  color: #4D9FFF;
+  letter-spacing: 0.3em;
+}
+
+/* Card with energy border on hover */
+.energy-card {
+  transition: border-color 0.4s ease, background 0.4s ease;
+}
+.energy-card:hover {
+  border-color: transparent;
+  background: linear-gradient(#05080F, #05080F) padding-box,
+              linear-gradient(135deg, #0044AA, #FF6600) border-box;
+  border: 1px solid transparent;
+}
+
+/* Orange accent line for section headers */
+.accent-line::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #FF6600, #0044AA);
+  margin-bottom: 1rem;
+}
+
+/* Section backgrounds must bleed full width */
+.section-blue-deep,
+.section-blue-mid,
+.section-orange-accent,
+.section-cta {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-left: calc(50vw - min(50vw, 600px));
+  padding-right: calc(50vw - min(50vw, 600px));
+}

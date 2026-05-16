@@ -75,8 +75,8 @@ const layers = [
     </div>
 
     <!-- Content over image -->
-    <div class="relative px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto w-full">
-      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">The Technology</p>
+    <div class="relative px-8 md:px-12 pt-48 pb-24 max-w-5xl mx-auto w-full flex flex-col justify-center min-h-[75vh]">
+      <p class="font-body text-xs tracking-[0.3em] uppercase mb-6 animate-fade-up eyebrow-over-image">The Technology</p>
       <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
         THE MINE IS<br />THE BATTERY.
       </h1>
@@ -98,7 +98,7 @@ const layers = [
         </div>
         <!-- Content -->
         <div class="md:col-span-5">
-          <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-3">{layer.tag}</p>
+          <p class="font-body text-xs tracking-[0.25em] uppercase eyebrow-over-image mb-3">{layer.tag}</p>
           <h2 class="font-display font-bold text-3xl text-frost mb-6 flex items-center gap-3">
             {layer.name}
             {layer.patent && (
@@ -128,7 +128,7 @@ const layers = [
   ))}
 
   <!-- Physics note -->
-  <section class="py-20 px-8 md:px-12 max-w-7xl mx-auto reveal">
+  <section class="py-20 px-8 md:px-12 max-w-7xl mx-auto reveal section-orange-accent">
     <div class="bg-rule p-10 md:p-14">
       <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4">The Physics</p>
       <p class="font-display font-bold text-xl md:text-2xl text-frost leading-snug max-w-3xl">
