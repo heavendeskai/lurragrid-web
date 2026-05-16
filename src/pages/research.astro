@@ -10,15 +10,26 @@ import Footer from '../components/Footer.astro';
 >
   <Nav />
 
-  <!-- Hero -->
-  <section class="min-h-[50vh] flex flex-col justify-end px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto">
-    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">Academic Foundation</p>
-    <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
-      PEER-REVIEWED<br />FOUNDATION.
-    </h1>
-    <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
-      LurraGrid is built on three years of multidisciplinary research. Not a concept. Not a simulation. A validated system with published prior art and a peer-reviewed engineering model.
-    </p>
+  <!-- Hero — full bleed blueprint/hologram image -->
+  <section class="relative min-h-[75vh] flex flex-col justify-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/research-hero.jpg"
+        alt="Engineering blueprints transitioning to holographic 3D mine shaft model"
+        class="w-full h-full object-cover object-right"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.60) 40%, rgba(0,0,0,0.30) 100%);"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, transparent 50%);"></div>
+    </div>
+    <div class="relative px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto w-full">
+      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">Academic Foundation</p>
+      <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+        PEER-REVIEWED<br />FOUNDATION.
+      </h1>
+      <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
+        LurraGrid is built on three years of multidisciplinary research. Not a concept. Not a simulation. A validated system with published prior art and a peer-reviewed engineering model.
+      </p>
+    </div>
   </section>
 
   <div class="border-t border-rule mx-8 md:mx-12"></div>
