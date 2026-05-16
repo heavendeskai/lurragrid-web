@@ -76,7 +76,10 @@ const screeningCriteria = [
         alt="Abandoned hard rock mine — LurraNode candidate site"
         class="w-full h-full object-cover object-center"
       />
-      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.25) 100%);"></div>
+      <!-- Heavy top fade — protects nav -->
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.50) 15%, rgba(0,0,0,0.15) 35%, transparent 55%);"></div>
+      <!-- Bottom fade -->
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.65) 40%, transparent 65%);"></div>
       <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(0,20,60,0.3) 0%, transparent 60%);"></div>
     </div>
     <div class="relative px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto w-full">
