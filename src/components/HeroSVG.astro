@@ -124,16 +124,19 @@
     <!-- Penstock line -->
     <line x1="175" y1="565" x2="175" y2="612" stroke="#0055CC" stroke-width="3" class="delay-5"/>
 
-    <!-- Power output line -->
-    <line x1="310" y1="527" x2="480" y2="527" stroke="#F5F7FA" stroke-width="1" stroke-dasharray="5,3" class="delay-5"/>
-    <line x1="480" y1="527" x2="480" y2="440" stroke="#F5F7FA" stroke-width="1" stroke-dasharray="5,3" class="delay-5"/>
-    <circle cx="480" cy="424" r="16" fill="none" stroke="#FF6600" stroke-width="1.5" class="delay-6"/>
-    <!-- Orange bolt on BTM output too -->
-    <path d="M 484 414 L 477 424 L 482 424 L 476 434 L 485 422 L 480 422 Z"
+    <!-- Power output line — runs from turbine UP the right shaft to surface, then to BTM circle -->
+    <line x1="310" y1="527" x2="430" y2="527" stroke="#FF6600" stroke-width="1" stroke-dasharray="5,3" stroke-opacity="0.6" class="delay-5"/>
+    <line x1="430" y1="527" x2="430" y2="40" stroke="#FF6600" stroke-width="1" stroke-dasharray="5,3" stroke-opacity="0.6" class="delay-5"/>
+    <line x1="430" y1="40" x2="500" y2="40" stroke="#FF6600" stroke-width="1" stroke-dasharray="5,3" stroke-opacity="0.6" class="delay-6"/>
+    <!-- BTM OUTPUT at top — powering the data center above ground -->
+    <circle cx="516" cy="40" r="18" fill="#0A0E18" stroke="#FF6600" stroke-width="1.5" class="delay-6"/>
+    <path d="M 520 28 L 511 40 L 517 40 L 509 52 L 522 38 L 516 38 Z"
       fill="#FF6600" filter="url(#boltGlow)"
       style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0s 2.5s ease forwards,boltPulse 1.6s 2.8s ease-in-out infinite;opacity:0"/>
-    <text x="447" y="408" fill="#A0A8B5" font-size="7" font-family="Inter,sans-serif" letter-spacing="1.5"
+    <text x="470" y="22" fill="#FF6600" font-size="7" font-family="Inter,sans-serif" letter-spacing="1.5"
       style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.3s ease forwards;opacity:0">BTM OUTPUT</text>
+    <text x="463" y="32" fill="#A0A8B5" font-size="6.5" font-family="Inter,sans-serif" letter-spacing="1"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.4s ease forwards;opacity:0">DATA CENTER ↑</text>
 
     <!-- LOWER RESERVOIR -->
     <rect x="80" y="612" width="340" height="118" rx="3" fill="#0044AA" fill-opacity="0.08" stroke="#0044AA" stroke-width="1.5" class="delay-6"/>
