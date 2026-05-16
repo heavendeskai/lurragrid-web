@@ -68,15 +68,26 @@ const screeningCriteria = [
 >
   <Nav />
 
-  <!-- Hero -->
-  <section class="min-h-[50vh] flex flex-col justify-end px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto">
-    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">The Portfolio</p>
-    <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
-      THREE LURRANODES.<br />ONE PLATFORM.
-    </h1>
-    <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
-      Each LurraNode is an operating hard rock mine converted into a LurraCore underground pumped hydro power plant. Screened from 950 pre-qualified sites across 15 states.
-    </p>
+  <!-- Hero — full bleed mine image -->
+  <section class="relative min-h-[75vh] flex flex-col justify-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/sites-hero.jpg"
+        alt="Abandoned hard rock mine — LurraNode candidate site"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.25) 100%);"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(0,20,60,0.3) 0%, transparent 60%);"></div>
+    </div>
+    <div class="relative px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto w-full">
+      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">The Portfolio</p>
+      <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+        THREE LURRANODES.<br />ONE PLATFORM.
+      </h1>
+      <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
+        Each LurraNode is an operating hard rock mine converted into a LurraCore underground pumped hydro power plant. Screened from 950 pre-qualified sites across 15 states.
+      </p>
+    </div>
   </section>
 
   <div class="border-t border-rule mx-8 md:mx-12"></div>
