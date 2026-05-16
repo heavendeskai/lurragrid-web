@@ -25,79 +25,135 @@
         <stop offset="0%" stop-color="#0044AA" stop-opacity="0.5"/>
         <stop offset="100%" stop-color="#002266" stop-opacity="0.25"/>
       </linearGradient>
+
+      <!-- Clip path for left shaft — keeps water droplets inside shaft -->
+      <clipPath id="leftShaftClip">
+        <rect x="160" y="190" width="30" height="300"/>
+      </clipPath>
+
+      <!-- Clip path for penstock -->
+      <clipPath id="penstockClip">
+        <rect x="168" y="565" width="14" height="50"/>
+      </clipPath>
     </defs>
 
     <rect width="600" height="760" fill="url(#grid)" opacity="0.5"/>
 
-    <!-- SURFACE LINE y=60 -->
+    <!-- SURFACE LINE -->
     <line x1="0" y1="60" x2="600" y2="60" stroke="#F5F7FA" stroke-width="1.5" class="delay-1"/>
-    <text x="10" y="52" fill="#A0A8B5" font-size="9" font-family="Inter,sans-serif" letter-spacing="2" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.3s ease forwards;opacity:0">SURFACE</text>
+    <text x="10" y="52" fill="#A0A8B5" font-size="9" font-family="Inter,sans-serif" letter-spacing="2"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.3s ease forwards;opacity:0">SURFACE</text>
 
     <!-- Headframe LEFT -->
     <line x1="175" y1="10" x2="175" y2="60" stroke="#0055CC" stroke-width="1.5" class="delay-1"/>
     <line x1="150" y1="60" x2="200" y2="60" stroke="#0055CC" stroke-width="2" class="delay-1"/>
     <line x1="160" y1="10" x2="175" y2="30" stroke="#0055CC" stroke-width="1" class="delay-1"/>
     <line x1="190" y1="10" x2="175" y2="30" stroke="#0055CC" stroke-width="1" class="delay-1"/>
-    <text x="110" y="8" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.4s ease forwards;opacity:0">INTAKE SHAFT</text>
+    <text x="110" y="8" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1.5"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.4s ease forwards;opacity:0">INTAKE SHAFT</text>
 
     <!-- Headframe RIGHT -->
     <line x1="415" y1="10" x2="415" y2="60" stroke="#0055CC" stroke-width="1.5" class="delay-2"/>
     <line x1="390" y1="60" x2="440" y2="60" stroke="#0055CC" stroke-width="2" class="delay-2"/>
     <line x1="400" y1="10" x2="415" y2="30" stroke="#0055CC" stroke-width="1" class="delay-2"/>
     <line x1="430" y1="10" x2="415" y2="30" stroke="#0055CC" stroke-width="1" class="delay-2"/>
-    <text x="355" y="8" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.4s ease forwards;opacity:0">RETURN SHAFT</text>
+    <text x="355" y="8" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1.5"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 0.4s ease forwards;opacity:0">RETURN SHAFT</text>
 
-    <!-- UPPER RESERVOIR — right at surface y=60 to y=190 -->
+    <!-- UPPER RESERVOIR -->
     <rect x="80" y="62" width="340" height="128" rx="3" fill="#0044AA" fill-opacity="0.10" stroke="#0044AA" stroke-width="1.5" class="delay-2"/>
     <rect x="82" y="80" width="336" height="108" rx="2" fill="url(#waterTop)" fill-opacity="0.65" class="delay-3"/>
-    <line x1="82" y1="80" x2="418" y2="80" stroke="#0055CC" stroke-width="1.2" stroke-dasharray="5,3" class="delay-3"/>
-    <text x="215" y="77" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="2" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.2s ease forwards;opacity:0">UPPER RESERVOIR</text>
-    <text x="225" y="135" fill="#0066EE" font-size="10" font-family="Inter,sans-serif" letter-spacing="1" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.3s ease forwards;opacity:0">700,000 m³</text>
+    <!-- Animated water surface ripple -->
+    <line x1="82" y1="80" x2="418" y2="80" stroke="#0055CC" stroke-width="1.2" stroke-dasharray="5,3" class="delay-3 water-surface"/>
+    <text x="215" y="77" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="2"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.2s ease forwards;opacity:0">UPPER RESERVOIR</text>
+    <text x="225" y="135" fill="#0066EE" font-size="10" font-family="Inter,sans-serif" letter-spacing="1"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.3s ease forwards;opacity:0">700,000 m³</text>
 
-    <!-- LEFT SHAFT y=190 to y=490 -->
+    <!-- LEFT SHAFT -->
     <rect x="160" y="190" width="30" height="300" fill="url(#shaftGrad)" stroke="#0044AA" stroke-width="1" class="delay-3"/>
     <line x1="130" y1="290" x2="160" y2="290" stroke="#0044AA" stroke-width="0.5" class="delay-3"/>
-    <text x="72" y="294" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.4s ease forwards;opacity:0">1,500 ft</text>
+    <text x="72" y="294" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.4s ease forwards;opacity:0">1,500 ft</text>
     <line x1="130" y1="390" x2="160" y2="390" stroke="#0044AA" stroke-width="0.5" class="delay-4"/>
-    <text x="72" y="394" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.6s ease forwards;opacity:0">2,500 ft</text>
+    <text x="72" y="394" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 1.6s ease forwards;opacity:0">2,500 ft</text>
 
-    <!-- RIGHT SHAFT y=190 to y=680 -->
+    <!-- WATER DROPLETS falling in left shaft — clipped inside shaft -->
+    <g clip-path="url(#leftShaftClip)" style="opacity:0;animation:fadeIn 0s 3s ease forwards">
+      <!-- Drop 1 -->
+      <circle cx="172" cy="220" r="3" fill="#0055CC" fill-opacity="0.8" class="drop drop-1"/>
+      <!-- Drop 2 -->
+      <circle cx="178" cy="270" r="2.5" fill="#0066DD" fill-opacity="0.7" class="drop drop-2"/>
+      <!-- Drop 3 -->
+      <circle cx="170" cy="330" r="3" fill="#0055CC" fill-opacity="0.8" class="drop drop-3"/>
+      <!-- Drop 4 -->
+      <circle cx="180" cy="380" r="2" fill="#0066DD" fill-opacity="0.6" class="drop drop-4"/>
+      <!-- Drop 5 -->
+      <circle cx="174" cy="430" r="3" fill="#0055CC" fill-opacity="0.8" class="drop drop-5"/>
+      <!-- Streak 1 — thin vertical line suggesting fast flow -->
+      <rect x="171" y="240" width="2" height="12" fill="#0055CC" fill-opacity="0.4" class="drop drop-2"/>
+      <rect x="177" y="300" width="2" height="10" fill="#0055CC" fill-opacity="0.4" class="drop drop-3"/>
+      <rect x="173" y="360" width="2" height="14" fill="#0055CC" fill-opacity="0.4" class="drop drop-4"/>
+      <rect x="179" y="410" width="2" height="12" fill="#0055CC" fill-opacity="0.4" class="drop drop-5"/>
+    </g>
+
+    <!-- PENSTOCK water flow to lower reservoir -->
+    <g clip-path="url(#penstockClip)" style="opacity:0;animation:fadeIn 0s 3.5s ease forwards">
+      <circle cx="175" cy="575" r="3" fill="#0055CC" fill-opacity="0.8" class="drop drop-penstock-1"/>
+      <circle cx="175" cy="590" r="2.5" fill="#0066DD" fill-opacity="0.7" class="drop drop-penstock-2"/>
+      <rect x="173" y="580" width="2" height="10" fill="#0055CC" fill-opacity="0.4" class="drop drop-penstock-1"/>
+    </g>
+
+    <!-- RIGHT SHAFT -->
     <rect x="400" y="190" width="30" height="490" fill="url(#shaftGrad)" stroke="#0044AA" stroke-width="1" class="delay-3"/>
 
-    <!-- Flow arrow down -->
-    <polygon points="168,440 182,440 175,458" fill="#0055CC" class="delay-4" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.4s 1.7s ease forwards;opacity:0"/>
-
-    <!-- TURBINE / PUMP y=490 to y=570 — center of diagram -->
+    <!-- TURBINE / PUMP — with rotating blades -->
     <rect x="120" y="490" width="190" height="75" rx="6" fill="#0044AA" fill-opacity="0.18" stroke="#0055CC" stroke-width="1.5" class="delay-5"/>
+    <!-- Static outer ring -->
     <circle cx="215" cy="527" r="22" fill="none" stroke="#0055CC" stroke-width="1.5" class="delay-5"/>
-    <line x1="215" y1="505" x2="215" y2="549" stroke="#0055CC" stroke-width="1" class="delay-5"/>
-    <line x1="193" y1="527" x2="237" y2="527" stroke="#0055CC" stroke-width="1" class="delay-5"/>
-    <line x1="199" y1="511" x2="231" y2="543" stroke="#0055CC" stroke-width="0.8" class="delay-5"/>
-    <line x1="199" y1="543" x2="231" y2="511" stroke="#0055CC" stroke-width="0.8" class="delay-5"/>
-    <text x="145" y="484" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.0s ease forwards;opacity:0">TURBINE / PUMP</text>
+    <!-- Rotating blade group — spins continuously after draw -->
+    <g style="transform-origin:215px 527px;transform-box:fill-box;opacity:0;animation:fadeIn 0s 3.2s ease forwards,spinTurbine 2.5s 3.2s linear infinite">
+      <line x1="215" y1="505" x2="215" y2="549" stroke="#0055CC" stroke-width="1.5"/>
+      <line x1="193" y1="527" x2="237" y2="527" stroke="#0055CC" stroke-width="1.5"/>
+      <line x1="199" y1="511" x2="231" y2="543" stroke="#0055CC" stroke-width="1"/>
+      <line x1="199" y1="543" x2="231" y2="511" stroke="#0055CC" stroke-width="1"/>
+    </g>
+    <!-- Center hub -->
+    <circle cx="215" cy="527" r="4" fill="#0055CC" fill-opacity="0.6" class="delay-5"/>
+    <text x="145" y="484" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="1.5"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.0s ease forwards;opacity:0">TURBINE / PUMP</text>
 
-    <!-- Penstock turbine to lower reservoir -->
+    <!-- Penstock line -->
     <line x1="175" y1="565" x2="175" y2="612" stroke="#0055CC" stroke-width="3" class="delay-5"/>
-    <polygon points="169,597 181,597 175,614" fill="#0055CC" class="delay-6" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.4s 2.1s ease forwards;opacity:0"/>
 
     <!-- Power output line -->
     <line x1="310" y1="527" x2="480" y2="527" stroke="#F5F7FA" stroke-width="1" stroke-dasharray="5,3" class="delay-5"/>
     <line x1="480" y1="527" x2="480" y2="440" stroke="#F5F7FA" stroke-width="1" stroke-dasharray="5,3" class="delay-5"/>
     <circle cx="480" cy="424" r="16" fill="none" stroke="#F5F7FA" stroke-width="1" class="delay-6"/>
-    <text x="473" y="430" fill="#F5F7FA" font-size="13" font-family="Inter,sans-serif" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.2s ease forwards;opacity:0">&#x26A1;</text>
-    <text x="447" y="408" fill="#A0A8B5" font-size="7" font-family="Inter,sans-serif" letter-spacing="1.5" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.3s ease forwards;opacity:0">BTM OUTPUT</text>
+    <text x="473" y="430" fill="#F5F7FA" font-size="13" font-family="Inter,sans-serif"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.2s ease forwards;opacity:0">&#x26A1;</text>
+    <text x="447" y="408" fill="#A0A8B5" font-size="7" font-family="Inter,sans-serif" letter-spacing="1.5"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.3s ease forwards;opacity:0">BTM OUTPUT</text>
 
-    <!-- LOWER RESERVOIR y=612 to y=730 -->
+    <!-- Pulsing power output dot on the line -->
+    <circle cx="395" cy="527" r="4" fill="#F5F7FA" fill-opacity="0.9"
+      style="opacity:0;animation:fadeIn 0s 3s ease forwards,pulseFlow 1.8s 3s ease-in-out infinite"/>
+
+    <!-- LOWER RESERVOIR -->
     <rect x="80" y="612" width="340" height="118" rx="3" fill="#0044AA" fill-opacity="0.08" stroke="#0044AA" stroke-width="1.5" class="delay-6"/>
     <rect x="82" y="670" width="336" height="58" rx="2" fill="url(#waterBot)" fill-opacity="0.5" class="delay-6"/>
-    <line x1="82" y1="670" x2="418" y2="670" stroke="#0044AA" stroke-width="1" stroke-dasharray="4,3" class="delay-6"/>
-    <text x="215" y="750" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="2" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.4s ease forwards;opacity:0">LOWER RESERVOIR</text>
+    <line x1="82" y1="670" x2="418" y2="670" stroke="#0044AA" stroke-width="1" stroke-dasharray="4,3" class="delay-6 water-surface-slow"/>
+    <text x="215" y="750" fill="#A0A8B5" font-size="8" font-family="Inter,sans-serif" letter-spacing="2"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.4s ease forwards;opacity:0">LOWER RESERVOIR</text>
 
-    <!-- Depth bar right -->
+    <!-- Depth bar -->
     <line x1="555" y1="60" x2="555" y2="730" stroke="#0044AA" stroke-width="0.5" class="delay-2"/>
     <line x1="545" y1="60" x2="565" y2="60" stroke="#0044AA" stroke-width="0.5" class="delay-2"/>
     <line x1="545" y1="730" x2="565" y2="730" stroke="#0044AA" stroke-width="0.5" class="delay-6"/>
-    <text x="561" y="400" fill="#A0A8B5" font-size="7" font-family="Inter,sans-serif" letter-spacing="1" transform="rotate(90,561,400)" style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.0s ease forwards;opacity:0">3,500 ft DEPTH</text>
+    <text x="561" y="400" fill="#A0A8B5" font-size="7" font-family="Inter,sans-serif" letter-spacing="1"
+      transform="rotate(90,561,400)"
+      style="stroke-dasharray:none;stroke-dashoffset:0;animation:fadeIn 0.5s 2.0s ease forwards;opacity:0">3,500 ft DEPTH</text>
   </svg>
 </div>
 
@@ -105,5 +161,42 @@
   @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+  }
+
+  /* Turbine spin */
+  @keyframes spinTurbine {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  /* Water droplets falling — loop continuously */
+  @keyframes dropFall {
+    0%   { transform: translateY(0px);   opacity: 0.8; }
+    80%  { transform: translateY(280px); opacity: 0.6; }
+    100% { transform: translateY(300px); opacity: 0; }
+  }
+
+  /* Staggered drops */
+  .drop { animation: dropFall 2.4s ease-in infinite; }
+  .drop-1 { animation-delay: 3.0s; }
+  .drop-2 { animation-delay: 3.4s; }
+  .drop-3 { animation-delay: 3.8s; }
+  .drop-4 { animation-delay: 4.2s; }
+  .drop-5 { animation-delay: 4.6s; }
+  .drop-penstock-1 { animation: dropFall 1.2s ease-in infinite; animation-delay: 3.5s; }
+  .drop-penstock-2 { animation: dropFall 1.2s ease-in infinite; animation-delay: 3.8s; }
+
+  /* Water surface shimmer */
+  @keyframes shimmer {
+    0%   { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -30; }
+  }
+  .water-surface      { animation: fadeIn 0.5s 1.5s ease forwards, shimmer 2s 2s linear infinite; opacity: 0; }
+  .water-surface-slow { animation: fadeIn 0.5s 2.5s ease forwards, shimmer 3s 3s linear infinite; opacity: 0; }
+
+  /* Power pulse along output line */
+  @keyframes pulseFlow {
+    0%, 100% { opacity: 0.3; r: 3; }
+    50%       { opacity: 1.0; r: 5; }
   }
 </style>
