@@ -214,17 +214,12 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Section backgrounds must bleed full width */
+/* Section backgrounds — full viewport width */
 .section-blue-deep,
 .section-blue-mid,
 .section-orange-accent,
 .section-cta {
   width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding-left: calc(50vw - min(50vw, 600px));
-  padding-right: calc(50vw - min(50vw, 600px));
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
 }
