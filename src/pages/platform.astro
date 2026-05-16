@@ -56,15 +56,31 @@ const layers = [
 >
   <Nav />
 
-  <!-- Hero -->
-  <section class="min-h-[60vh] flex flex-col justify-end px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto">
-    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">The Technology</p>
-    <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
-      THE MINE IS<br />THE BATTERY.
-    </h1>
-    <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
-      LurraGrid is an energy arbitrage platform: acquire curtailed renewables at near-zero cost, deliver firm dispatchable power at premium behind-the-meter rates. Six integrated layers. One platform.
-    </p>
+  <!-- Hero — full bleed image -->
+  <section class="relative min-h-[75vh] flex flex-col justify-end overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img
+        src="/platform-hero.jpg"
+        alt="LurraCore underground control room"
+        class="w-full h-full object-cover object-center"
+      />
+      <!-- Dark overlay — void black at 65% so text pops and brand stays dominant -->
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.45) 100%);"></div>
+      <!-- Royal blue tint layer — keeps it on-brand -->
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(0,20,60,0.35) 0%, transparent 60%);"></div>
+    </div>
+
+    <!-- Content over image -->
+    <div class="relative px-8 md:px-12 pt-40 pb-20 max-w-5xl mx-auto w-full">
+      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6 animate-fade-up">The Technology</p>
+      <h1 class="font-display font-bold text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+        THE MINE IS<br />THE BATTERY.
+      </h1>
+      <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
+        LurraGrid is an energy arbitrage platform: acquire curtailed renewables at near-zero cost, deliver firm dispatchable power at premium behind-the-meter rates. Six integrated layers. One platform.
+      </p>
+    </div>
   </section>
 
   <div class="border-t border-rule mx-8 md:mx-12"></div>
