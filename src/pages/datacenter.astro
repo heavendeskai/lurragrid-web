@@ -1,0 +1,332 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Data Center Power — LurraGrid"
+  description="LurraGrid converts renewable surplus into firm behind-the-meter power and thermal infrastructure for advanced compute."
+>
+  <Nav />
+
+  <!-- Hero -->
+  <section class="relative min-h-[75vh] flex flex-col justify-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/platform-hero.jpg"
+        alt="LurraCore underground control room"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.50) 15%, rgba(0,0,0,0.15) 35%, transparent 55%);"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.75) 40%, transparent 65%);"></div>
+    </div>
+    <div class="relative px-6 md:px-12 pt-28 md:pt-48 pb-12 md:pb-24 max-w-5xl mx-auto w-full flex flex-col justify-center min-h-[60vh] md:min-h-[75vh]">
+      <p class="font-body text-xs tracking-[0.3em] uppercase mb-6 animate-fade-up eyebrow-over-image">For AI Data Center Operators</p>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+        Your Data Center<br />Is Ready.<br />Your Power Isn't.
+      </h1>
+      <p class="font-body text-lg text-frost-dim max-w-2xl leading-relaxed mb-8 animate-fade-up-delay-2">
+        LurraGrid is developing firm behind-the-meter power and thermal infrastructure for AI compute facilities, designed to align energy deployment with data center construction timelines while reducing exposure to grid queues, energy market volatility, and cooling inefficiency.
+      </p>
+      <div class="animate-fade-up-delay-3">
+        <a href="/contact" class="inline-block font-display font-bold text-sm tracking-widest uppercase px-8 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300">
+          Discuss Power Availability →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Core line -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-blue-deep">
+    <div class="max-w-4xl mx-auto">
+      <p class="font-display font-bold text-2xl md:text-3xl text-frost leading-snug">
+        LurraGrid converts renewable surplus into firm behind-the-meter power and thermal infrastructure for advanced compute.
+      </p>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 1: The Gap We Bridge -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">The Market Reality</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">The Gap We Bridge</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          AI compute demand is growing faster than any grid was built to serve. Interconnection queues stretch five to seven years. Traditional generation remains essential, but the market increasingly needs complementary infrastructure layers that can improve power availability, storage, dispatch, and cooling performance.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          At the same time, renewable energy is producing more surplus power than the grid can absorb — during overnight, midday, and off-peak windows when renewable output can exceed demand.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          LurraGrid sits at the intersection of both realities. We absorb renewable surplus when the grid cannot use it, store it underground in converted hard rock mine infrastructure, and dispatch firm behind-the-meter power when your compute load demands it most.
+        </p>
+        <div class="border-l-2 border-royal pl-6">
+          <p class="font-body text-base text-frost leading-relaxed">
+            We do not compete with the grid or with traditional generation. We help bridge the gap traditional infrastructure cannot close on the compute deployment timeline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 2: Timeline -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-blue-mid reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">The Development Gap</p>
+        <p class="font-display font-bold text-7xl md:text-8xl text-rule mt-4">18</p>
+        <p class="font-body text-xs tracking-widest uppercase text-frost-dim">Months</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">Designed Around Your Timeline</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          Data center construction schedules increasingly move faster than utility interconnection timelines. LurraGrid is designed to close that timing gap by advancing LurraNodes through site control, engineering, power market structuring, EPC packaging, and LurraPDA development before the offtaker needs power online.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed">
+          The goal is not to wait for a utility queue to define the project timeline. The goal is to prepare mine-based energy infrastructure so power deployment can align more closely with compute deployment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 3: What We Deliver -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">The Power Profile</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost">What LurraGrid Is Designed to Deliver</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule">
+        <div class="bg-void p-8 md:p-10">
+          <div class="w-10 h-1 mb-5" style="background: linear-gradient(90deg, #FF6600, #0044AA);"></div>
+          <h3 class="font-display font-bold text-xl text-frost mb-3">70 MW Initial Firm Delivery Target</h3>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">
+            Designed to convert intermittent surplus into firm scheduled delivery, directly behind the meter. Larger campus opportunities may be evaluated through multiple LurraNodes or expanded site-specific configurations.
+          </p>
+        </div>
+        <div class="bg-void p-8 md:p-10">
+          <div class="w-10 h-1 mb-5" style="background: linear-gradient(90deg, #FF6600, #0044AA);"></div>
+          <h3 class="font-display font-bold text-xl text-frost mb-3">14–16 Hours of Daily Dispatch</h3>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">
+            LurraCore dispatches during peak demand hours and recharges during low-value overnight windows through LurraCharge — a negotiated renewable surplus acquisition strategy designed to keep input costs structurally low.
+          </p>
+        </div>
+        <div class="bg-void p-8 md:p-10">
+          <div class="w-10 h-1 mb-5" style="background: linear-gradient(90deg, #0044AA, #FF6600);"></div>
+          <h3 class="font-display font-bold text-xl text-frost mb-3">Fast-Response Stabilization Layer</h3>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">
+            LurraBridge provides battery-backed load stabilization, supporting grid interconnection requirements and protecting your load from transition interruptions.
+          </p>
+        </div>
+        <div class="bg-void p-8 md:p-10">
+          <div class="w-10 h-1 mb-5" style="background: linear-gradient(90deg, #0044AA, #FF6600);"></div>
+          <h3 class="font-display font-bold text-xl text-frost mb-3">20-Year Take-or-Pay LurraPDA</h3>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">
+            Infrastructure-grade contract duration. Price certainty from day one through year twenty. Designed to support project-level financing once site control, engineering, offtake, permitting pathway, and transaction documents are in place.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 4: LurraTherm -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-orange-accent reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">Beyond Power</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-4">LurraTherm: The Cooling Advantage</h2>
+        <p class="font-body text-lg text-frost-dim max-w-2xl leading-relaxed">
+          AI compute is a thermal problem as much as a power problem. GPU-dense racks generate extraordinary heat loads. Conventional air cooling consumes a significant portion of your delivered power managing temperature — power that never reaches your compute.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-rule mb-12">
+        <div class="bg-void p-8">
+          <p class="font-body text-xs tracking-widest uppercase text-royal mb-4">Direct-to-Chip Liquid Cooling</p>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">
+            Captures heat at the GPU level — where it is generated, before it becomes a facility-wide thermal problem. A controlled liquid loop manages heat at the server level with precision that air cooling cannot match.
+          </p>
+        </div>
+        <div class="bg-void p-8">
+          <p class="font-body text-xs tracking-widest uppercase text-royal mb-4">Underground Thermal Exchange</p>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">
+            Transfers captured heat into a controlled heat exchange system using the mine's underground thermal environment — stable subsurface temperatures and mine-water thermal mass. Not mine water running through your servers. A clean, engineered exchange architecture between facility and subsurface loops.
+          </p>
+        </div>
+        <div class="bg-void p-8">
+          <p class="font-body text-xs tracking-widest uppercase text-royal mb-4">Waste Heat as Community Asset</p>
+          <p class="font-body text-sm text-frost-dim leading-relaxed">
+            LurraGrid is designing pathways to redirect waste heat toward beneficial community uses — district heating, greenhouses, municipal buildings, industrial process heat. LurraTherm turns data center waste heat from a liability into a local infrastructure asset.
+          </p>
+        </div>
+      </div>
+
+      <!-- PUE callout -->
+      <div class="border border-rule p-8 md:p-12 max-w-3xl">
+        <p class="font-body text-xs tracking-widest uppercase text-royal mb-4">The Efficiency Gain</p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          In a conventional facility, cooling and mechanical overhead can consume 20–25% of delivered power. LurraTherm is designed to reduce that burden. At a 70MW facility, improving PUE from approximately 1.25 to approximately 1.10 can reduce facility overhead by roughly 8MW.
+        </p>
+        <p class="font-display font-bold text-xl text-frost">
+          That means more of the same power envelope can support productive compute rather than mechanical cooling.
+        </p>
+      </div>
+
+      <p class="font-body text-sm text-frost-dim leading-relaxed mt-8 max-w-3xl">
+        LurraTherm is part of the LurraGrid infrastructure roadmap, developed in parallel with each LurraNode's site-specific feasibility work. We present it not as a guarantee but as a designed advantage — one that makes a LurraNode a fundamentally more efficient and community-compatible compute infrastructure platform.
+      </p>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 5: BTM Advantage -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-blue-deep reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-10">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">Why Behind the Meter</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost">The BTM Advantage</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule mb-10">
+        <div class="bg-void p-6 flex gap-4 items-start">
+          <span class="w-1.5 h-1.5 bg-royal-light rounded-full mt-2 shrink-0"></span>
+          <div>
+            <p class="font-body text-xs tracking-widest uppercase text-royal mb-1">Grid Interconnection Exposure</p>
+            <p class="font-body text-sm text-frost-dim">Power development on your timeline, not the utility's</p>
+          </div>
+        </div>
+        <div class="bg-void p-6 flex gap-4 items-start">
+          <span class="w-1.5 h-1.5 bg-royal-light rounded-full mt-2 shrink-0"></span>
+          <div>
+            <p class="font-body text-xs tracking-widest uppercase text-royal mb-1">Transmission Costs</p>
+            <p class="font-body text-sm text-frost-dim">You pay for generation, not delivery</p>
+          </div>
+        </div>
+        <div class="bg-void p-6 flex gap-4 items-start">
+          <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 shrink-0"></span>
+          <div>
+            <p class="font-body text-xs tracking-widest uppercase text-royal mb-1">Energy Market Volatility</p>
+            <p class="font-body text-sm text-frost-dim">Rate structured for the full contract term — reduced exposure depending on final energy stack</p>
+          </div>
+        </div>
+        <div class="bg-void p-6 flex gap-4 items-start">
+          <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 shrink-0"></span>
+          <div>
+            <p class="font-body text-xs tracking-widest uppercase text-royal mb-1">Cooling Overhead</p>
+            <p class="font-body text-sm text-frost-dim">More delivered power can support compute instead of mechanical load</p>
+          </div>
+        </div>
+        <div class="bg-void p-6 flex gap-4 items-start md:col-span-2">
+          <span class="w-1.5 h-1.5 bg-royal-light rounded-full mt-2 shrink-0"></span>
+          <div>
+            <p class="font-body text-xs tracking-widest uppercase text-royal mb-1">Permitting Uncertainty</p>
+            <p class="font-body text-sm text-frost-dim">Existing industrial infrastructure, not greenfield construction — designed around renewable-powered recharge and non-combustion dispatch, compatible with ESG-aligned capital and operator requirements</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-l-2 border-royal pl-6">
+        <p class="font-body text-base text-frost leading-relaxed">
+          Renewable surplus is not a problem for LurraGrid. It is the recharge source.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 6: The Stack -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">Six Layers. One Platform.</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-4">The Complete Infrastructure Stack</h2>
+        <p class="font-body text-base text-frost-dim max-w-2xl">LurraGrid is not only a power source. It is an integrated infrastructure platform designed around the specific demands of AI compute.</p>
+      </div>
+      <div class="space-y-px bg-rule">
+        {[
+          { num: '01', name: 'LurraCharge', tag: 'Recharge Layer', body: 'Acquires low-value renewable surplus during recharge windows through negotiated power purchase agreements. Renewable surplus is not a problem for LurraGrid. It is the recharge source.' },
+          { num: '02', name: 'LurraCore', tag: 'Storage & Dispatch', body: 'Stores energy as potential hydraulic head in underground hard rock mine reservoirs. Dispatches firm power through turbines during peak compute hours.' },
+          { num: '03', name: 'LurraCascade', tag: 'Patent Pending', body: 'Dual-reservoir threshold switching designed to support continuity across reservoir cycles. Prior art published through Zenodo in May 2026. USPTO provisional filing in process.' },
+          { num: '04', name: 'LurraBridge', tag: 'Stabilization Layer', body: 'Battery bridge layer provides fast-response load stabilization for grid interconnection requirements and transition management.' },
+          { num: '05', name: 'LurraTherm', tag: 'Thermal Infrastructure', body: 'Underground thermal exchange architecture designed to reduce cooling burden, improve power utilization efficiency, and create pathways for beneficial waste heat reuse.' },
+          { num: '06', name: 'LurraPDA', tag: '20-Year Take-or-Pay', body: 'Infrastructure-grade Power Delivery Agreement. Behind-the-meter delivery. Designed to support project-level financing once site control, engineering, offtake, permitting pathway, and transaction documents are in place.' },
+        ].map(layer => (
+          <div class="bg-void p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+            <div class="md:col-span-1">
+              <span class="font-display font-bold text-3xl text-rule">{layer.num}</span>
+            </div>
+            <div class="md:col-span-3">
+              <h3 class="font-display font-bold text-xl text-frost">{layer.name}</h3>
+              <p class="font-body text-xs tracking-widest uppercase text-royal mt-1">{layer.tag}</p>
+            </div>
+            <div class="md:col-span-8">
+              <p class="font-body text-sm text-frost-dim leading-relaxed">{layer.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 7: Who We're Talking To -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-blue-mid reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">Right For You If</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-8">Who We're Talking To</h2>
+        <div class="space-y-6">
+          {[
+            'You are developing or expanding an AI compute or colocation facility in the 50–100MW range and need behind-the-meter power structured around your development schedule.',
+            'You are an infrastructure developer or fund evaluating multi-node campus opportunities requiring long-duration, firm, dispatchable power with thermal management integration.',
+            'You are operating in a market where grid interconnection timelines, permitting constraints, or capital requirements make conventional utility power impractical on your development schedule.',
+          ].map(item => (
+            <div class="flex gap-4 items-start border-b border-rule pb-6">
+              <span class="w-1.5 h-1.5 bg-royal-light rounded-full mt-2 shrink-0"></span>
+              <p class="font-body text-base text-frost-dim leading-relaxed">{item}</p>
+            </div>
+          ))}
+          <p class="font-body text-sm text-frost-dim leading-relaxed pt-2">
+            LurraGrid is also in early conversations with hyperscale operators and infrastructure partners evaluating larger campus-scale deployments across multiple LurraNodes. If that describes your interest, we want to hear from you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="pt-20 pb-0 px-6 md:px-12 text-center reveal section-cta w-full">
+    <div class="max-w-3xl mx-auto py-20">
+      <h2 class="font-display font-bold text-3xl md:text-5xl text-frost mb-6">
+        Let's talk about your power and cooling requirements.
+      </h2>
+      <p class="font-body text-lg text-frost-dim mb-10 leading-relaxed">
+        We review location, load profile, timeline, power requirements, cooling needs, and development constraints to determine whether a LurraNode or LurraPDA structure may fit your project.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block font-display font-bold text-sm tracking-widest uppercase px-10 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300"
+      >
+        Discuss Power Availability →
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
