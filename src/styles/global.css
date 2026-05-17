@@ -401,3 +401,54 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
   .hero-pan, .hero-drift, .hero-zoom-tight, .hero-zoom-sites,
   .radar-sweep::after, .hero-scan::after { animation: none; }
 }
+
+/* ── Platform hero — slow zoom in (not pan) ── */
+@keyframes heroZoomPlatform {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.12); }
+}
+.hero-zoom-platform {
+  animation: heroZoomPlatform 30s ease-in forwards;
+  transform-origin: center center;
+}
+
+/* ── Forklift orange blink — soft ambient light ── */
+@keyframes forkBlink {
+  0%, 45%, 55%, 100% { opacity: 0; }
+  48%, 52%            { opacity: 1; }
+}
+.forklift-light {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,140,0,0.9) 0%, rgba(255,80,0,0.4) 50%, transparent 80%);
+  top: 38%;
+  right: 22%;
+  animation: forkBlink 3.2s ease-in-out infinite;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+/* ── About orange rings — start big, fade to void ── */
+.orange-ring-fade {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,102,0,0.25);
+  animation: ringFadeOut 5s ease-out infinite;
+}
+.ring-fade-1 { width: 600px; height: 600px; animation-delay: 0s; }
+.ring-fade-2 { width: 600px; height: 600px; animation-delay: 1.7s; }
+.ring-fade-3 { width: 600px; height: 600px; animation-delay: 3.4s; }
+
+@keyframes ringFadeOut {
+  0%   { transform: scale(1);    opacity: 0.5; border-color: rgba(255,102,0,0.25); }
+  60%  { transform: scale(1.6);  opacity: 0.15; }
+  100% { transform: scale(2.0);  opacity: 0; border-color: rgba(255,102,0,0.0); }
+}
+
+@media (max-width: 768px) {
+  .hero-zoom-platform { animation: none; }
+  .orange-ring-fade   { display: none; }
+  .forklift-light     { display: none; }
+}
