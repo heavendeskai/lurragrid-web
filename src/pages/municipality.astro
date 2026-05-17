@@ -1,0 +1,376 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base
+  title="Municipal Partners — LurraGrid"
+  description="LurraGrid helps mining communities evaluate whether yesterday's industrial infrastructure can become tomorrow's power, thermal, and compute infrastructure."
+>
+  <Nav />
+
+  <!-- Hero -->
+  <section class="relative min-h-[75vh] flex flex-col justify-end overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/sites-hero.jpg"
+        alt="Abandoned hard rock mine site — LurraNode candidate"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.50) 15%, rgba(0,0,0,0.15) 35%, transparent 55%);"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.75) 40%, transparent 65%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(140,60,0,0.18) 0%, transparent 65%);"></div>
+    </div>
+    <div class="relative px-6 md:px-12 pt-28 md:pt-48 pb-12 md:pb-24 max-w-5xl mx-auto w-full flex flex-col justify-center min-h-[60vh] md:min-h-[75vh]">
+      <p class="font-body text-xs tracking-[0.3em] uppercase mb-6 animate-fade-up eyebrow-over-image">For Municipal Partners & Mine Owners</p>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl text-frost leading-none mb-6 animate-fade-up-delay-1">
+        The Mine Built<br />This Community.<br />It May Not Be<br />Finished Yet.
+      </h1>
+      <p class="font-body text-lg text-frost-dim max-w-2xl leading-relaxed mb-8 animate-fade-up-delay-2">
+        LurraGrid helps mining communities evaluate whether yesterday's industrial infrastructure can become tomorrow's power, thermal, and compute infrastructure — on terms that respect the community's history, ownership, and long-term interests.
+      </p>
+      <div class="animate-fade-up-delay-3">
+        <a href="/contact" class="inline-block font-display font-bold text-sm tracking-widest uppercase px-8 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300">
+          Start a Site Conversation →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Core line -->
+  <section class="py-16 md:py-20 px-6 md:px-12 w-full section-blue-deep">
+    <div class="max-w-4xl mx-auto">
+      <p class="font-display font-bold text-2xl md:text-3xl text-frost leading-snug">
+        LurraGrid does not see abandoned mine communities as forgotten places. We see them as infrastructure communities with legacy assets that may have a second life.
+      </p>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 1: What We See -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">A Different Lens</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">What We See</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          When LurraGrid looks at an abandoned hard rock mine, we do not only see a liability, a remediation problem, or a redevelopment challenge.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          We see depth. We see rock geometry. We see underground water. We see industrial access infrastructure built at extraordinary cost over decades. We see shafts that took ore to the surface for generations and may now be capable of taking power to the surface for the next fifty years.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          That is not sentiment. That is infrastructure assessment.
+        </p>
+        <div class="border-l-2 border-royal pl-6">
+          <p class="font-body text-base text-frost leading-relaxed">
+            The communities that grew around these mines understood something fundamental: what is underground has value. LurraGrid is asking whether that value has a new expression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 2: What the Mine Left Behind -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-blue-mid reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">The Legacy Asset</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-4">What the Mine Left Behind</h2>
+        <p class="font-body text-base text-frost-dim max-w-2xl leading-relaxed">
+          A closed mine is not an empty asset. It is a complex physical infrastructure system — shafts, tunnels, cavities, groundwater networks, surface access, industrial land, and decades of geological documentation. For conventional redevelopment, that complexity is often a burden. For LurraGrid, it may be the foundation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-rule">
+        {[
+          { label: 'Depth', body: 'Deep shafts create hydraulic head — the source of potential energy in a pumped hydro system. The deeper the shaft, the greater the energy potential per unit of water.' },
+          { label: 'Cavity Geometry', body: 'Underground cavities formed by decades of ore extraction may serve as natural reservoir volumes for upper and lower storage. In some cases, existing mine geometry may reduce or limit the need for new excavation.' },
+          { label: 'Groundwater', body: 'Mine water that communities have managed as a challenge for years becomes the working fluid of the energy system — managed, monitored, and cycled in a controlled operational loop.' },
+          { label: 'Industrial Land', body: 'Surface infrastructure, access roads, electrical connections, and industrial zoning already exist. The permitting pathway for energy infrastructure on former industrial land is different from greenfield development.' },
+          { label: 'Geological Documentation', body: 'Decades of mine records, surveys, and geological data reduce the uncertainty of site assessment. The geological work was already done by the original operators.' },
+          { label: 'Community Infrastructure', body: 'Workforce familiarity, industrial trades, local suppliers, and institutional knowledge of the site and its systems remain in the community long after the mine closes.' },
+        ].map(item => (
+          <div class="bg-void p-8">
+            <div class="w-8 h-1 mb-5" style="background: linear-gradient(90deg, #FF6600, #0044AA);"></div>
+            <p class="font-body text-xs tracking-widest uppercase text-royal mb-3">{item.label}</p>
+            <p class="font-body text-sm text-frost-dim leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 3: The Partnership Model -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">The Partnership Model</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">What LurraGrid Brings</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          LurraGrid does not begin by trying to acquire mines. We do not arrive with a purchase offer and a development plan already written.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          We begin with a site conversation.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          If a site shows potential, we advance through a structured evaluation process: geological review, hydrological assessment, engineering feasibility, power market analysis, permitting pathway review, and community engagement. Municipal partners are part of that process from the beginning — not informed at the end.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed">
+          If a site advances to development, the municipality's role in the long-term structure is part of the conversation. The goal is a partnership that creates durable infrastructure value for the community, not a transaction that extracts it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 4: Economic Layer — stat blocks -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-orange-accent reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">The Economic Layer</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-4">What This Could Mean for Your Community</h2>
+        <p class="font-body text-base text-frost-dim max-w-2xl leading-relaxed">
+          LurraGrid is careful not to promise outcomes that depend on site-specific feasibility, regulatory pathways, and market conditions we cannot predetermine. What we can describe is what a developed LurraNode is designed to create.
+        </p>
+      </div>
+
+      <!-- Big stat row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-rule mb-12">
+        <div class="bg-void px-8 py-10 text-center">
+          <p class="font-display font-bold text-5xl text-frost mb-2">50</p>
+          <p class="font-body text-xs tracking-[0.2em] uppercase text-royal mb-1">Years</p>
+          <p class="font-body text-xs text-frost-dim">Infrastructure Asset Life</p>
+        </div>
+        <div class="bg-void px-8 py-10 text-center">
+          <p class="font-display font-bold text-5xl text-frost mb-2">20</p>
+          <p class="font-body text-xs tracking-[0.2em] uppercase text-royal mb-1">Years</p>
+          <p class="font-body text-xs text-frost-dim">Take-or-Pay Revenue Structure</p>
+        </div>
+        <div class="bg-void px-8 py-10 text-center">
+          <p class="font-display font-bold text-5xl text-frost mb-2">0</p>
+          <p class="font-body text-xs tracking-[0.2em] uppercase text-royal mb-1">Combustion</p>
+          <p class="font-body text-xs text-frost-dim">Non-Combustion Dispatch System</p>
+        </div>
+        <div class="bg-void px-8 py-10 text-center">
+          <p class="font-display font-bold text-5xl text-frost mb-2">↑</p>
+          <p class="font-body text-xs tracking-[0.2em] uppercase text-royal mb-1">Tax Base</p>
+          <p class="font-body text-xs text-frost-dim">From Cost Center to Revenue Asset</p>
+        </div>
+      </div>
+
+      <!-- Economic detail grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule">
+        {[
+          { label: 'Long-Term Tax Base', body: 'A LurraNode is an operating power infrastructure facility. A mine that may have been a cost center for the municipality can potentially become part of a revenue-generating infrastructure asset — property tax, business tax, and long-term economic activity.' },
+          { label: 'Skilled Construction Employment', body: 'Mine shaft rehabilitation, mechanical installation, turbine commissioning, civil works, electrical systems — the same trades that built the mine. Welders, pipefitters, electricians, engineers. Site-specific construction scope determines the scale.' },
+          { label: 'Permanent Operations Workforce', body: 'An operating LurraNode requires control room operators, maintenance technicians, hydrological monitoring, safety systems, and facility management — long-term skilled positions in communities that often lost exactly those positions when the mine closed.' },
+          { label: 'Economic Ecosystem Activation', body: 'When compute infrastructure locates near a LurraNode, the supply chain follows. Fiber, facilities management, security, logistics, food service, and housing demand build around operating infrastructure.' },
+        ].map(item => (
+          <div class="bg-void p-8">
+            <div class="w-8 h-1 mb-5" style="background: linear-gradient(90deg, #FF6600, #0044AA);"></div>
+            <p class="font-body text-xs tracking-widest uppercase text-royal mb-3">{item.label}</p>
+            <p class="font-body text-sm text-frost-dim leading-relaxed">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pull quote -->
+  <section class="py-20 px-6 md:px-12 w-full" style="background: #030810;">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="w-16 h-px mx-auto mb-10" style="background: linear-gradient(90deg, #FF6600, #0044AA);"></div>
+      <p class="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-frost leading-tight">
+        The infrastructure that built these communities<br/>
+        <span style="color:#FF6600">may be the infrastructure that powers their next chapter.</span>
+      </p>
+      <div class="w-16 h-px mx-auto mt-10" style="background: linear-gradient(90deg, #0044AA, #FF6600);"></div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 5: LurraTherm for communities -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-blue-deep reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">LurraTherm</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">Waste Heat as Community Resource</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          Data centers generate heat. Conventional facilities discharge it as a liability — warm air exhausted into the environment, thermal load managed at cost.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          LurraTherm is designed to evaluate whether that heat can be redirected toward beneficial community uses. Site-specific feasibility determines what is viable where. We do not promise district heating for every community. We commit to evaluating it seriously at every site.
+        </p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+          {[
+            'District heating for municipal buildings',
+            'Greenhouse agriculture',
+            'Aquaculture systems',
+            'Industrial process heat',
+            'Water treatment support',
+            'Local energy campus development',
+          ].map(use => (
+            <div class="border border-rule p-4 flex gap-3 items-start">
+              <span class="w-1.5 h-1.5 shrink-0 mt-1.5" style="background:#FF6600;border-radius:50%;"></span>
+              <p class="font-body text-xs text-frost-dim leading-relaxed">{use}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-body text-sm text-frost-dim italic">
+          LurraTherm turns data center waste heat from a liability into a potential local infrastructure asset. Site-specific feasibility determines what is viable where.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 6: Community Compatibility -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">The Questions We Expect</p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost">Community Compatibility</h2>
+      </div>
+      <div class="space-y-px bg-rule">
+        {[
+          {
+            q: 'Will it be noisy?',
+            a: 'LurraCore operates underground. The primary mechanical systems — turbines, pumps, water flow — are contained within the shaft and underground cavities. Surface operations are designed around the existing industrial footprint of the mine site.',
+          },
+          {
+            q: 'Will it affect local water?',
+            a: "LurraGrid's objective is to design each LurraNode around a closed-cycle water system that minimizes dependence on municipal water supply. Site-specific hydrology, water chemistry, treatment requirements, and permitting determine the final operating plan.",
+          },
+          {
+            q: 'Will it affect the environment?',
+            a: 'LurraCore is designed as a non-combustion dispatch system. The goal is to minimize new land disturbance by working within or around existing industrial footprints where feasible. Environmental review is part of the site development process.',
+          },
+          {
+            q: 'Will it respect local history?',
+            a: 'The mine built the community. We are not here to rebrand it or erase it. The industrial archaeology of the site — the headframes, the surface structures, the documented history — is part of what makes a LurraNode meaningful. LurraGrid works with communities, not over them.',
+          },
+          {
+            q: 'Will it create local jobs?',
+            a: 'Site-specific construction and operations scope determines the answer. We do not make uniform job guarantees across sites. What we commit to is that every LurraNode development includes a community employment discussion as part of the project structure.',
+          },
+        ].map(item => (
+          <div class="bg-void p-8 grid grid-cols-1 md:grid-cols-12 gap-4">
+            <div class="md:col-span-4">
+              <p class="font-display font-bold text-lg text-frost">{item.q}</p>
+            </div>
+            <div class="md:col-span-8">
+              <p class="font-body text-sm text-frost-dim leading-relaxed">{item.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 7: Site Screening -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full section-blue-mid reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">Site Screening</p>
+        <div class="mt-6 border border-rule p-6">
+          <p class="font-display font-bold text-5xl text-frost">950</p>
+          <p class="font-body text-xs tracking-widest uppercase text-frost-dim mt-1">Potential Sites</p>
+          <p class="font-body text-xs text-frost-dim mt-2">Across 15 states in the LurraAtlas screening framework</p>
+        </div>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">Is Your Site a Candidate?</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-8">
+          Not every mine is a LurraNode candidate. LurraAtlas — our proprietary site screening framework — is built around a screened universe of roughly 950 potential sites across 15 states, using criteria drawn from depth, geometry, water, ownership, load proximity, and documentation. If your mine meets the basic profile, the conversation is worth having.
+        </p>
+        <p class="font-body text-xs tracking-widest uppercase text-royal mb-4">What We Look For</p>
+        <div class="space-y-3">
+          {[
+            'Strong hydraulic head potential, generally driven by shaft depth and usable elevation differential',
+            'Sufficient underground cavity volume for dual-reservoir storage at economic scale',
+            'Viable groundwater management pathway — not absence of water, but manageable water',
+            'Clear ownership structure — municipal, state, or federal mine owners are preferred partners',
+            'Proximity to transmission infrastructure or potential behind-the-meter compute load',
+            'Geological documentation from active mining operations',
+          ].map(item => (
+            <div class="flex gap-4 items-start border-b border-rule pb-3">
+              <span class="w-1.5 h-1.5 shrink-0 mt-2" style="background:#0055CC;border-radius:50%;"></span>
+              <p class="font-body text-sm text-frost-dim leading-relaxed">{item}</p>
+            </div>
+          ))}
+        </div>
+        <p class="font-body text-sm text-frost-dim mt-6 italic">
+          If you are not sure whether your site qualifies, that is what the initial conversation is for.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient mx-6 md:mx-12" />
+
+  <!-- Section 8: How it starts -->
+  <section class="py-16 md:py-24 px-6 md:px-12 w-full reveal">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+      <div class="md:col-span-3">
+        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mt-2 accent-line">The Process</p>
+      </div>
+      <div class="md:col-span-8">
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">How the Conversation Starts</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          We keep the first step simple.
+        </p>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-4">
+          You tell us about the site — location, depth, current ownership status, and any existing documentation. We review it against our screening criteria and respond with a candid assessment of whether it warrants further evaluation.
+        </p>
+        <div class="border-l-2 pl-6 mb-8" style="border-color: #FF6600;">
+          <p class="font-body text-base text-frost leading-relaxed">
+            No commitment required at the first step. No purchase offer. No development agreement. Just an initial review to determine whether the site deserves a deeper technical and municipal conversation.
+          </p>
+        </div>
+        <p class="font-body text-base text-frost-dim leading-relaxed">
+          An honest conversation between people who take industrial infrastructure seriously.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="pt-20 pb-0 px-6 md:px-12 text-center reveal section-cta w-full">
+    <div class="max-w-3xl mx-auto py-20">
+      <h2 class="font-display font-bold text-3xl md:text-5xl text-frost mb-6">
+        Is your mine a candidate?
+      </h2>
+      <p class="font-body text-lg text-frost-dim mb-10 leading-relaxed">
+        We review site location, depth, ownership, geological documentation, and proximity to load to determine whether a LurraNode feasibility study is warranted. The conversation starts here — on your terms.
+      </p>
+      <a
+        href="/contact"
+        class="inline-block font-display font-bold text-sm tracking-widest uppercase px-10 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300"
+      >
+        Start a Site Conversation →
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Base>
