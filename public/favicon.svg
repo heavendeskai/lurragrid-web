@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" fill="#000000"/>
-  <!-- Blue top half of bolt -->
-  <polygon points="21,3 18,3 11,16 14,16 17,16 21,3" fill="#0044AA"/>
-  <!-- Orange bottom half of bolt -->
-  <polygon points="11,16 14,16 9,29 23,16 17,16" fill="#FF6600"/>
+  <!-- Blue top half -->
+  <polygon points="24,3 21,3 8,16 12,16 16,16 24,3" fill="#0044AA"/>
+  <!-- Orange bottom half — narrow sharp tip -->
+  <polygon points="10,16 14,16 16,29 22,16 18,16" fill="#FF6600"/>
 </svg>
