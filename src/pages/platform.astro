@@ -204,7 +204,7 @@ const layers = [
           <h2 class="font-display font-bold text-3xl text-frost mb-6 flex items-center gap-3">
             {layer.name}
             {layer.patent && (
-              <span class="text-xs font-body tracking-widest uppercase border border-royal text-royal px-2 py-1 align-middle">Patent Pending</span>
+              <span class="text-xs font-body tracking-widest uppercase px-2 py-1 align-middle" style="border:1px solid #FF6600;color:#FF6600;">Patent Pending</span>
             )}
           </h2>
           <p class="font-body text-base text-frost-dim leading-relaxed">{layer.body}</p>
@@ -232,7 +232,7 @@ const layers = [
   <!-- Physics note -->
   <section class="py-20 px-8 md:px-12 reveal section-orange-accent w-full">
     <div class="bg-rule p-10 md:p-14">
-      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4">The Physics</p>
+      <p class="eyebrow">The Physics</p>
       <p class="font-display font-bold text-xl md:text-2xl text-frost leading-snug max-w-3xl">
         LurraCore is a storage and dispatch machine — not perpetual motion. Every megawatt delivered to the data center requires approximately 1.25 MW of LurraCharge input at 80% round-trip efficiency. The business works because the input-to-output cost spread is four to five times.
       </p>

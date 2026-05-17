@@ -4,253 +4,212 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import HeroSVG from '../components/HeroSVG.astro';
 ---
-
 <Base title="LurraGrid — Powering the AI Era from the Ground Down">
   <Nav />
 
-<!-- HERO — full bleed shaft image -->
+  <!-- HERO -->
   <section class="hero-section min-h-screen relative flex items-center justify-center overflow-hidden">
-
-    <!-- Background: the shaft -->
     <div class="absolute inset-0">
-      <img
-        src="/hero-shaft.jpg"
-        alt="LurraCore mine shaft looking down 3,500 feet"
-        class="w-full h-full object-cover object-center hero-zoom"
-      />
-      <!-- Top protection for nav -->
-      <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.30) 15%, transparent 40%);"></div>
-      <!-- Bottom darkening for text -->
-      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.50) 30%, transparent 60%);"></div>
-      <!-- Subtle vignette around edges -->
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%);"></div>
+      <img src="/hero-shaft.jpg" alt="LurraCore mine shaft 3,500 feet deep" class="w-full h-full object-cover object-center hero-zoom"/>
+      <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.30) 15%,transparent 40%);"></div>
+      <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,0.95) 0%,rgba(0,0,0,0.50) 30%,transparent 60%);"></div>
+      <div class="absolute inset-0" style="background:radial-gradient(ellipse 80% 80% at 50% 50%,transparent 40%,rgba(0,0,0,0.55) 100%);"></div>
     </div>
-
-    <!-- Pulsing ring overlay — energy rising from below -->
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
       <div class="pulse-ring ring-1"></div>
       <div class="pulse-ring ring-2"></div>
       <div class="pulse-ring ring-3"></div>
     </div>
-
-    <!-- Centered text over the shaft -->
-    <div class="relative text-center px-6 md:px-12 pt-24 md:pt-32 pb-12 md:pb-20 max-w-5xl mx-auto w-full flex flex-col items-center justify-center min-h-screen">
-      <p class="font-body text-xs tracking-[0.4em] uppercase mb-8 animate-fade-up eyebrow-over-image">
-        Underground Pumped Hydro Storage
-      </p>
-      <h1 class="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.9] text-frost mb-8 animate-fade-up-delay-1">
-        POWERING<br/>THE AI ERA<br/><span style="color:#0044AA">FROM THE</span><br/>GROUND DOWN.
+    <div class="relative text-center px-6 md:px-20 pt-24 pb-16 w-full max-w-6xl mx-auto flex flex-col items-center justify-center min-h-screen">
+      <p class="eyebrow animate-fade-up" style="--tw-text-opacity:1;">Underground Pumped Hydro Storage</p>
+      <h1 class="font-display font-bold text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] text-frost mb-8 animate-fade-up-delay-1">
+        POWERING<br/>THE AI ERA<br/><span style="color:#FF6600;">FROM THE</span><br/>GROUND DOWN.
       </h1>
       <p class="font-body text-lg text-frost-dim leading-relaxed mb-10 max-w-2xl animate-fade-up-delay-2">
         We convert abandoned hard rock mines into firm, dispatchable underground power infrastructure for AI compute — delivered directly behind the meter.
       </p>
       <div class="flex flex-wrap gap-4 justify-center animate-fade-up-delay-3">
-        <a href="/contact" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300">
-          Partner Inquiries
-        </a>
-        <a href="/platform" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 border border-frost-dim text-frost-dim hover:text-frost hover:border-frost transition-colors duration-300">
-          The Technology
-        </a>
+        <a href="/contact" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 text-frost transition-colors duration-300" style="background:#FF6600;">Partner Inquiries</a>
+        <a href="/platform" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 border border-frost-dim text-frost-dim hover:text-frost hover:border-frost transition-colors duration-300">The Technology</a>
       </div>
-
-      <!-- Stats strip at bottom -->
-      <div class="grid grid-cols-3 gap-4 md:gap-12 mt-10 md:mt-20 pt-8 md:pt-10 border-t border-rule w-full max-w-lg animate-fade-up-delay-3">
+      <div class="grid grid-cols-3 gap-4 md:gap-16 mt-16 pt-10 w-full max-w-2xl animate-fade-up-delay-3" style="border-top:1px solid rgba(255,102,0,0.3);">
         <div>
-          <p class="font-display font-bold text-3xl text-frost">950</p>
-          <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">Sites</p>
+          <p class="font-display font-bold text-4xl text-frost">950</p>
+          <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">Sites Screened</p>
         </div>
         <div>
-          <p class="font-display font-bold text-3xl text-frost">15</p>
+          <p class="font-display font-bold text-4xl text-frost">15</p>
           <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">States</p>
         </div>
         <div>
-          <p class="font-display font-bold text-3xl text-frost">50yr</p>
+          <p class="font-display font-bold text-4xl" style="color:#FF6600;">50yr</p>
           <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">Asset Life</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SVG DIAGRAM SECTION — below hero -->
-  <section class="py-16 md:py-24 px-6 md:px-12 border-t border-rule">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+  <!-- HOW IT WORKS -->
+  <section class="py-20 md:py-28 section-blue-deep w-full">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
       <div>
-        <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4">How It Works</p>
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-frost mb-6">The Mine Is the Battery.</h2>
+        <p class="eyebrow">How It Works</p>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-frost mb-6 leading-tight">The Mine Is<br/>the Battery.</h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-6">
+          Water stored in the upper reservoir falls through the shaft, drives a turbine at depth, and is pumped back overnight using curtailed renewable energy.
+        </p>
         <p class="font-body text-base text-frost-dim leading-relaxed">
-          Water stored in the upper reservoir falls through the shaft, drives a turbine at depth, and is pumped back overnight using curtailed renewable energy. Energy stored as potential head. Power delivered firm, on demand, behind the meter.
+          Energy stored as potential head. Power delivered firm, on demand, behind the meter. <span style="color:#FF6600;">Renewable surplus is not a problem for LurraGrid. It is the recharge source.</span>
         </p>
       </div>
-      <div>
-        <HeroSVG />
-      </div>
+      <div><HeroSVG /></div>
     </div>
   </section>
 
-  <!-- DIVIDER -->
-  <hr class="rule-gradient mx-8 md:mx-12" />
+  <hr class="rule-gradient" />
 
   <!-- THESIS -->
-  <section class="py-16 md:py-32 px-6 md:px-12 reveal section-blue-deep w-full">
-    <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-8">The Problem We Solve</p>
-    <p class="font-display font-bold text-2xl md:text-3xl text-frost leading-snug">
-      AI compute demand is outpacing the grid. Interconnection queues run five to seven years. ESG mandates restrict gas. LurraGrid converts existing underground infrastructure into firm, behind-the-meter power for hyperscale operators — delivered faster than the grid can build.
-    </p>
-  </section>
-
-  <!-- ARCHITECTURE CARDS -->
-  <section class="py-14 md:py-20 px-6 md:px-12 section-blue-mid w-full">
-    <div class="reveal mb-16">
-      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">The Architecture</p>
-      <h2 class="font-display font-bold text-3xl md:text-4xl text-frost">Three Layers. One Platform.</h2>
-    </div>
-    
-    <div class="grid md:grid-cols-3 gap-px bg-rule reveal">
-      <!-- LurraCore -->
-      <div class="bg-void p-10 hover:bg-rule transition-colors duration-500 group">
-        <div class="w-10 h-10 border border-royal flex items-center justify-center mb-6 group-hover:bg-royal transition-colors duration-300">
-          <span class="font-display font-bold text-xs text-royal group-hover:text-frost">01</span>
+  <section class="py-20 md:py-28 section-blue-mid w-full reveal">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <p class="eyebrow">The Market Reality</p>
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-frost leading-tight">Where the Grid Ends.<br/><span style="color:#FF6600;">LurraGrid Begins.</span></h2>
         </div>
-        <h3 class="font-display font-bold text-xl text-frost mb-3">LurraCore</h3>
-        <p class="font-body text-sm text-royal uppercase tracking-widest mb-4">Underground Storage &amp; Dispatch</p>
-        <p class="font-body text-sm text-frost-dim leading-relaxed">
-          The mine is the battery. Existing hard rock shafts and cavities become upper and lower reservoirs, storing energy as potential head. No new excavation. No new permitting. The infrastructure already exists.
-        </p>
-      </div>
-
-      <!-- LurraCascade -->
-      <div class="bg-void p-10 hover:bg-rule transition-colors duration-500 group">
-        <div class="w-10 h-10 border border-royal flex items-center justify-center mb-6 group-hover:bg-royal transition-colors duration-300">
-          <span class="font-display font-bold text-xs text-royal group-hover:text-frost">02</span>
+        <div class="md:col-span-7 md:col-start-6 flex flex-col justify-center space-y-6">
+          <div class="flex gap-5 items-start">
+            <span class="w-2 h-2 rounded-full shrink-0 mt-2" style="background:#FF6600;"></span>
+            <p class="font-body text-base text-frost-dim leading-relaxed">AI compute demand is doubling every 18 months. Grid interconnection queues run five to seven years.</p>
+          </div>
+          <div class="flex gap-5 items-start">
+            <span class="w-2 h-2 rounded-full shrink-0 mt-2" style="background:#FF6600;"></span>
+            <p class="font-body text-base text-frost-dim leading-relaxed">Renewables produce surplus energy the grid cannot absorb — overnight, midday, off-peak. That surplus is our recharge fuel.</p>
+          </div>
+          <div class="flex gap-5 items-start">
+            <span class="w-2 h-2 rounded-full shrink-0 mt-2" style="background:#0055CC;"></span>
+            <p class="font-body text-base text-frost-dim leading-relaxed">LurraGrid absorbs that surplus, stores it underground, and dispatches firm behind-the-meter power when AI compute needs it most.</p>
+          </div>
         </div>
-        <h3 class="font-display font-bold text-xl text-frost mb-3">LurraCascade</h3>
-        <p class="font-body text-sm text-royal uppercase tracking-widest mb-4">Patent-Pending Continuity System</p>
-        <p class="font-body text-sm text-frost-dim leading-relaxed">
-          Dual-reservoir threshold switching maintains uninterrupted power delivery. Automated actuators engage at 20% reservoir threshold, seamlessly transitioning between cascade stages. Patent pending, prior art published CERN Zenodo May 2026.
-        </p>
       </div>
-
-      <!-- LurraCharge -->
-      <div class="bg-void p-10 hover:bg-rule transition-colors duration-500 group">
-        <div class="w-10 h-10 border border-royal flex items-center justify-center mb-6 group-hover:bg-royal transition-colors duration-300">
-          <span class="font-display font-bold text-xs text-royal group-hover:text-frost">03</span>
-        </div>
-        <h3 class="font-display font-bold text-xl text-frost mb-3">LurraCharge</h3>
-        <p class="font-body text-sm text-royal uppercase tracking-widest mb-4">Curtailed Energy Recharge Layer</p>
-        <p class="font-body text-sm text-frost-dim leading-relaxed">
-          Recharges overnight on curtailed wind and off-peak grid power — energy the market cannot absorb. The arbitrage spread between curtailed input and firm daytime output is the business model.
-        </p>
-      </div>
-    </div>
-
-    <div class="mt-8 reveal">
-      <a href="/platform" class="font-body text-sm tracking-widest uppercase text-royal hover:text-royal-light transition-colors duration-300">
-        Full Platform Architecture →
-      </a>
     </div>
   </section>
 
-  <!-- THREE LURRANODES -->
-  <section class="py-14 md:py-20 px-6 md:px-12 section-orange-accent w-full">
-    <div class="reveal mb-16">
-      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-4 accent-line">The Portfolio</p>
-      <h2 class="font-display font-bold text-3xl md:text-4xl text-frost">Three LurraNodes.</h2>
-    </div>
-    
-    <div class="grid md:grid-cols-3 gap-8 reveal">
-      <!-- Node 001 -->
-      <div class="border border-rule p-8 relative overflow-hidden group hover:border-royal transition-colors duration-500">
-        <div class="absolute top-0 left-0 w-full h-0.5 bg-royal scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-        <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-2">LurraNode 001</p>
-        <h3 class="font-display font-bold text-2xl text-frost mb-1">Mather B</h3>
-        <p class="font-body text-sm text-frost-dim mb-4">Negaunee, Michigan · Hard Rock Iron Ore</p>
-        <div class="border-t border-rule pt-4 mt-4">
-          <p class="font-body text-xs text-frost-dim">Depth: 3,500 ft · Phase 1 Anchor Site</p>
-          <p class="font-body text-xs text-frost-dim mt-1">Asset life: 50 years</p>
-        </div>
-        <div class="mt-4">
-          <span class="inline-block text-xs tracking-widest uppercase border border-royal text-royal px-3 py-1">Active</span>
-        </div>
-      </div>
+  <hr class="rule-gradient" />
 
-      <!-- Node 002 -->
-      <div class="border border-rule p-8 relative overflow-hidden group hover:border-royal transition-colors duration-500">
-        <div class="absolute top-0 left-0 w-full h-0.5 bg-royal scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-        <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-2">LurraNode 002</p>
-        <h3 class="font-display font-bold text-2xl text-frost mb-1">Quincy</h3>
-        <p class="font-body text-sm text-frost-dim mb-4">Hancock, Michigan · Hard Rock Copper</p>
-        <div class="border-t border-rule pt-4 mt-4">
-          <p class="font-body text-xs text-frost-dim">Depth: 6,200 ft · World Record Depth</p>
-          <p class="font-body text-xs text-frost-dim mt-1">Phase 2</p>
+  <!-- ARCHITECTURE -->
+  <section class="py-20 md:py-28 section-orange-accent w-full reveal">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <p class="eyebrow">The Architecture</p>
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-frost">Three Layers. One Platform.</h2>
         </div>
-        <div class="mt-4">
-          <span class="inline-block text-xs tracking-widest uppercase border border-rule text-frost-dim px-3 py-1">Phase 2</span>
-        </div>
+        <a href="/platform" class="font-body text-sm tracking-widest uppercase text-royal hover:text-royal-light transition-colors duration-300 shrink-0">Full Architecture →</a>
       </div>
-
-      <!-- Node 003 -->
-      <div class="border border-rule p-8 relative overflow-hidden group hover:border-royal transition-colors duration-500">
-        <div class="absolute top-0 left-0 w-full h-0.5 bg-royal scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-        <p class="font-body text-xs tracking-[0.25em] uppercase text-royal mb-2">LurraNode 003</p>
-        <h3 class="font-display font-bold text-2xl text-frost mb-1">Comstock</h3>
-        <p class="font-body text-sm text-frost-dim mb-4">Virginia City, Nevada · Silver &amp; Gold</p>
-        <div class="border-t border-rule pt-4 mt-4">
-          <p class="font-body text-xs text-frost-dim">Depth: 3,360 ft · Reno Data Center Corridor</p>
-          <p class="font-body text-xs text-frost-dim mt-1">Phase 3</p>
-        </div>
-        <div class="mt-4">
-          <span class="inline-block text-xs tracking-widest uppercase border border-rule text-frost-dim px-3 py-1">Phase 3</span>
-        </div>
+      <div class="grid md:grid-cols-3 gap-px bg-rule">
+        {[
+          { num:'01', name:'LurraCore', tag:'Underground Storage & Dispatch', body:'Existing hard rock shafts become upper and lower reservoirs. The mine is the battery.' },
+          { num:'02', name:'LurraCascade', tag:'Patent-Pending Continuity', body:'Dual-reservoir threshold switching designed to support continuous dispatch across reservoir cycles.' },
+          { num:'03', name:'LurraCharge', tag:'Renewable Surplus Recharge', body:'Acquires curtailed energy during off-peak windows. Renewable intermittency is our recharge strategy.' },
+        ].map(c => (
+          <div class="bg-void p-10 group hover:bg-rule transition-colors duration-500">
+            <div class="w-9 h-9 border mb-6 flex items-center justify-center group-hover:bg-royal transition-colors duration-300" style="border-color:#FF6600;">
+              <span class="font-display font-bold text-xs group-hover:text-frost" style="color:#FF6600;">{c.num}</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-frost mb-2">{c.name}</h3>
+            <p class="font-body text-xs tracking-widest uppercase mb-4" style="color:#FF6600;">{c.tag}</p>
+            <p class="font-body text-sm text-frost-dim leading-relaxed">{c.body}</p>
+          </div>
+        ))}
       </div>
-    </div>
-
-    <div class="mt-8 reveal">
-      <a href="/sites" class="font-body text-sm tracking-widest uppercase text-royal hover:text-royal-light transition-colors duration-300">
-        View All Sites →
-      </a>
     </div>
   </section>
 
-  <!-- RESEARCH FOUNDATION -->
-  <section class="py-16 md:py-32 px-6 md:px-12 reveal section-blue-deep w-full">
-    <div class="border border-rule p-12 md:p-16">
-      <p class="font-body text-xs tracking-[0.3em] uppercase text-royal mb-6">Peer-Reviewed Foundation</p>
-      <h2 class="font-display font-bold text-2xl md:text-3xl text-frost mb-6 max-w-2xl">
-        Three years of peer-reviewed academic research. One patent-pending continuity system. One platform.
-      </h2>
-      <p class="font-body text-sm text-frost-dim leading-relaxed max-w-2xl mb-8">
-        Built on foundational research conducted at Michigan Technological University under the MTU PUSH program, funded by the Alfred P. Sloan Foundation. The LurraCascade Continuity System was published as prior art on CERN Zenodo, May 5, 2026.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-6">
-        <a href="/research" class="font-body text-sm tracking-widest uppercase text-royal hover:text-royal-light transition-colors duration-300">
-          Research Foundation →
-        </a>
-        <a
-          href="https://zenodo.org/doi/10.5281/zenodo.20045602"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="font-body text-sm tracking-widest uppercase text-frost-dim hover:text-frost transition-colors duration-300"
-        >
-          DOI 10.5281/zenodo.20045602 ↗
-        </a>
+  <hr class="rule-gradient" />
+
+  <!-- LURRANODES -->
+  <section class="py-20 md:py-28 section-blue-deep w-full reveal">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <p class="eyebrow">The Portfolio</p>
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-frost">Three LurraNodes.</h2>
+        </div>
+        <a href="/sites" class="font-body text-sm tracking-widest uppercase text-royal hover:text-royal-light transition-colors duration-300 shrink-0">All Sites →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-px bg-rule">
+        {[
+          { id:'001', name:'Mather B', loc:'Negaunee, Michigan', ore:'Hard Rock Iron Ore', depth:'3,500 ft', phase:'Phase 1 — Anchor Site', active:true },
+          { id:'002', name:'Quincy',   loc:'Hancock, Michigan',  ore:'Hard Rock Copper',  depth:'6,200 ft', phase:'Phase 2', active:false },
+          { id:'003', name:'Comstock', loc:'Virginia City, Nevada', ore:'Silver & Gold',  depth:'3,360 ft', phase:'Phase 3', active:false },
+        ].map(n => (
+          <div class="bg-void p-10 group relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" style="background:linear-gradient(90deg,#FF6600,#0044AA);"></div>
+            <p class="font-body text-xs tracking-widest uppercase mb-2" style="color:#FF6600;">LurraNode {n.id}</p>
+            <h3 class="font-display font-bold text-3xl text-frost mb-1">{n.name}</h3>
+            <p class="font-body text-sm text-frost-dim mb-6">{n.loc} · {n.ore}</p>
+            <div class="border-t pt-4 space-y-1" style="border-color:#1A1F2B;">
+              <p class="font-body text-xs text-frost-dim">Depth: {n.depth}</p>
+              <p class="font-body text-xs text-frost-dim">{n.phase}</p>
+            </div>
+            <div class="mt-4">
+              {n.active
+                ? <span class="text-xs tracking-widest uppercase px-3 py-1 border" style="border-color:#FF6600;color:#FF6600;">Active</span>
+                : <span class="text-xs tracking-widest uppercase px-3 py-1 border border-rule text-frost-dim">{n.phase.split('—')[0].trim()}</span>
+              }
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule-gradient" />
+
+  <!-- RESEARCH -->
+  <section class="py-20 md:py-28 section-blue-mid w-full reveal">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-7">
+        <p class="eyebrow">Peer-Reviewed Foundation</p>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-frost mb-6 leading-tight">Three years.<br/>One patent.<br/><span style="color:#FF6600;">One platform.</span></h2>
+        <p class="font-body text-base text-frost-dim leading-relaxed mb-8">
+          Michigan Technological University. Alfred P. Sloan Foundation Grant G-2018-11305. Prior art published Zenodo, May 2026.
+        </p>
+        <div class="flex flex-wrap gap-6">
+          <a href="/research" class="font-body text-sm tracking-widest uppercase text-royal hover:text-royal-light transition-colors duration-300">Research Foundation →</a>
+          <a href="https://zenodo.org/doi/10.5281/zenodo.20045602" target="_blank" rel="noopener noreferrer" class="font-body text-sm tracking-widest uppercase text-frost-dim hover:text-frost transition-colors duration-300">DOI ↗</a>
+        </div>
+      </div>
+      <div class="md:col-span-4 md:col-start-9 grid grid-cols-1 gap-4">
+        {[
+          { num:'3yr', label:'Peer-Reviewed Study' },
+          { num:'4', label:'Independent Patent Claims' },
+          { num:'950', label:'Pre-Screened Sites' },
+        ].map(s => (
+          <div class="border-l-2 pl-5" style="border-color:#FF6600;">
+            <p class="font-display font-bold text-3xl text-frost">{s.num}</p>
+            <p class="font-body text-xs text-frost-dim tracking-widest uppercase mt-1">{s.label}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-32 px-8 md:px-12 text-center reveal section-cta w-full">
-    <h2 class="font-display font-bold text-3xl md:text-5xl text-frost mb-6">
-      Ready to build firm power infrastructure for the AI era?
-    </h2>
-    <p class="font-body text-lg text-frost-dim mb-10">
-      We are accepting partner inquiries from data center operators, municipal owners, EPC firms, and institutional investors.
-    </p>
-    <a
-      href="/contact"
-      class="inline-block font-display font-bold text-sm tracking-widest uppercase px-10 py-4 bg-royal text-frost hover:bg-royal-light transition-colors duration-300"
-    >
-      Start a Conversation
-    </a>
+  <section class="py-24 md:py-32 section-cta w-full reveal">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="eyebrow">Partner With LurraGrid</p>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-frost leading-tight">Ready to build firm power<br/>for the AI era?</h2>
+      </div>
+      <div class="flex flex-col gap-6">
+        <p class="font-body text-base text-frost-dim leading-relaxed">Data center operators, municipal mine owners, EPC partners, and institutional investors — every conversation starts here.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/contact" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 text-frost transition-colors duration-300" style="background:#FF6600;">Start a Conversation</a>
+          <a href="/datacenter" class="font-display font-bold text-sm tracking-widest uppercase px-8 py-4 border border-royal text-royal hover:bg-royal hover:text-frost transition-colors duration-300">Data Centers →</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <Footer />
