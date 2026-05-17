@@ -179,7 +179,7 @@ nav.scrolled {
   position: absolute;
   border-radius: 50%;
   border: 1px solid rgba(0,85,204,0.4);
-  animation: ringPulse 4s ease-out infinite;
+  animation: ringPulse 8s ease-out infinite;
 }
 .ring-1 { width: 200px; height: 200px; animation-delay: 0s; }
 .ring-2 { width: 200px; height: 200px; animation-delay: 1.3s; }
@@ -463,9 +463,9 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
   .pulse-ring {
     display: block;
   }
-  .ring-1 { width: 120px; height: 120px; }
-  .ring-2 { width: 120px; height: 120px; }
-  .ring-3 { width: 120px; height: 120px; }
+  .ring-1 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 0s; }
+  .ring-2 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 4s; }
+  .ring-3 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 8s; }
 
   /* Keep orange ring fade on about — smaller */
   .orange-ring-fade { display: block; }
