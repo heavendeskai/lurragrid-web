@@ -50,6 +50,22 @@ const {
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+    // Mobile: touch card orange top bar reveal
+    if (window.matchMedia('(hover: none)').matches) {
+      document.querySelectorAll('.group').forEach(card => {
+        card.addEventListener('touchstart', () => {
+          const bar = card.querySelector('.scale-x-0');
+          if (bar) { bar.style.transform = 'scaleX(1)'; bar.style.transition = 'transform 0.3s ease'; }
+        }, { passive: true });
+        card.addEventListener('touchend', () => {
+          setTimeout(() => {
+            const bar = card.querySelector('.scale-x-0, [style*="scaleX"]');
+            if (bar) { bar.style.transform = ''; }
+          }, 600);
+        }, { passive: true });
+      });
+    }
+
     // Stat bar grow on scroll
     const statObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {

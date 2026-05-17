@@ -452,3 +452,167 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
   .orange-ring-fade   { display: none; }
   .forklift-light     { display: none; }
 }
+
+/* ══════════════════════════════════════════
+   MOBILE MOTION & LAYOUT SYSTEM
+   ══════════════════════════════════════════ */
+
+/* Mobile keeps these animations — lightweight enough */
+@media (max-width: 768px) {
+  /* Keep pulse rings on home but smaller */
+  .pulse-ring {
+    display: block;
+  }
+  .ring-1 { width: 120px; height: 120px; }
+  .ring-2 { width: 120px; height: 120px; }
+  .ring-3 { width: 120px; height: 120px; }
+
+  /* Keep orange ring fade on about — smaller */
+  .orange-ring-fade { display: block; }
+  .ring-fade-1 { width: 280px; height: 280px; }
+  .ring-fade-2 { width: 280px; height: 280px; }
+  .ring-fade-3 { width: 280px; height: 280px; }
+
+  /* Keep active pulse badge */
+  .active-pulse { animation: activePulse 2.5s ease-in-out infinite; }
+
+  /* Keep bolt breath */
+  .bolt-breath { animation: boltBreath 3s ease-in-out infinite; }
+
+  /* Keep radar sweep — subtle on mobile */
+  .radar-sweep::after { animation: radarSweep 12s ease-in-out infinite; }
+
+  /* Keep stat glow */
+  .stat-glow { animation: statGlow 4s ease-in-out infinite; }
+
+  /* Mobile hero — fade up feels premium */
+  .hero-section h1,
+  .hero-section p,
+  .hero-section div { animation-duration: 1s; }
+}
+
+/* ── Mobile layout fixes ── */
+@media (max-width: 768px) {
+  /* Hero headline size */
+  .hero-section h1 {
+    font-size: 2.6rem;
+    line-height: 0.92;
+  }
+
+  /* Stat strip — tighter on mobile */
+  .hero-section .grid-cols-3 {
+    gap: 0.75rem;
+  }
+
+  /* Sections — tighter padding on mobile */
+  section[class*="py-20"] {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+  section[class*="py-28"] {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Card grids — single col with good spacing */
+  .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+  .grid.md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Before/after split — stack on mobile */
+  .grid.md\:grid-cols-12 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Timeline acts — stack with clear dividers */
+  .grid.md\:grid-cols-3 > div {
+    border-right: none !important;
+    border-top: none !important;
+  }
+
+  /* Platform layer rows — clean stack */
+  .grid.md\:grid-cols-12 > div[class*="col-span"] {
+    grid-column: span 12 !important;
+  }
+
+  /* Nav — tighter */
+  nav { padding-top: 1rem; padding-bottom: 1rem; }
+
+  /* Eyebrow — smaller on mobile */
+  .eyebrow { font-size: 0.65rem; }
+
+  /* Pull quotes — smaller font */
+  .text-5xl { font-size: 1.75rem; }
+  .text-4xl { font-size: 1.5rem; }
+
+  /* Buttons — full width on mobile */
+  .flex.flex-wrap.gap-4 a {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Contact form — full width */
+  .grid.md\:grid-cols-12 form {
+    grid-column: span 12 !important;
+  }
+
+  /* Footer — tighter */
+  footer .flex.flex-col.md\:flex-row { gap: 2rem; }
+
+  /* Research DOI — smaller */
+  .text-7xl { font-size: 2.5rem; }
+
+  /* Stat numbers on datacenter/municipality */
+  .text-5xl.md\:text-6xl { font-size: 2.25rem; }
+}
+
+/* ── Small phones (375px) ── */
+@media (max-width: 420px) {
+  .hero-section h1 { font-size: 2.2rem; }
+  .px-6 { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .grid-cols-3 { gap: 0.5rem; }
+}
+
+/* ── Mobile nav menu items — better tap targets ── */
+#mobile-menu a {
+  padding: 0.75rem 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+/* ── Mobile hero images — ensure they fill properly ── */
+@media (max-width: 768px) {
+  section.relative.min-h-\[75vh\] {
+    min-height: 60vh;
+  }
+  section.relative img {
+    object-position: center center !important;
+  }
+}
+
+/* ── Mobile SVG diagram — scale down gracefully ── */
+@media (max-width: 768px) {
+  .hero-svg-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* ── Touch feedback on cards ── */
+@media (hover: none) {
+  .card-trace::before {
+    display: none;
+  }
+  /* Show orange top bar on touch devices via JS */
+  .group:active .scale-x-0 {
+    transform: scaleX(1) !important;
+  }
+}
