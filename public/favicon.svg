@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <rect width="32" height="32" fill="#000000"/>
-  <text x="6" y="24" font-family="sans-serif" font-weight="bold" font-size="22" fill="#0044AA">L</text>
+  <!-- Blue top half of bolt -->
+  <polygon points="21,3 18,3 11,16 14,16 17,16 21,3" fill="#0044AA"/>
+  <!-- Orange bottom half of bolt -->
+  <polygon points="11,16 14,16 9,29 23,16 17,16" fill="#FF6600"/>
 </svg>
