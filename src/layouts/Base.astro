@@ -50,6 +50,30 @@ const {
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+    // Stat bar grow on scroll
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.stat-bar-animate').forEach((el, i) => {
+      el.classList.add(`stat-bar-${(i % 3) + 1}`);
+      statObserver.observe(el);
+    });
+
+    // Municipality parallax
+    const parallaxImg = document.querySelector('.hero-parallax');
+    if (parallaxImg) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        const pos = 50 + (scrolled * 0.015);
+        parallaxImg.style.objectPosition = `center ${Math.min(pos, 60)}%`;
+      }, { passive: true });
+    }
+
     // Nav scroll behavior
     const nav = document.querySelector('nav');
     if (nav) {
