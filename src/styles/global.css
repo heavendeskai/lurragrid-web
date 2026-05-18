@@ -616,3 +616,69 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
     transform: scaleX(1) !important;
   }
 }
+
+/* ── Mobile text legibility — stronger hero overlays ── */
+@media (max-width: 768px) {
+  /* Ensure hero text always readable */
+  .hero-text-overlay {
+    text-shadow: 0 2px 12px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.9);
+  }
+  /* Stronger bottom gradient on all hero sections */
+  section.relative .hero-bottom-overlay {
+    background: linear-gradient(to top,
+      rgba(0,0,0,0.98) 0%,
+      rgba(0,0,0,0.85) 25%,
+      rgba(0,0,0,0.50) 55%,
+      transparent 75%) !important;
+  }
+  /* Stronger top overlay for nav protection */
+  section.relative .hero-top-overlay {
+    background: linear-gradient(to bottom,
+      rgba(0,0,0,0.95) 0%,
+      rgba(0,0,0,0.60) 15%,
+      transparent 40%) !important;
+  }
+  /* Core statement — smaller on mobile */
+  .core-statement {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+  }
+  /* Long eyebrows — truncate gracefully */
+  .eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+  }
+  /* Hero subhead — max 3 lines on mobile */
+  .hero-subhead-mobile {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ── Hero text legibility — text shadow on all hero headlines ── */
+section.relative h1,
+section.relative .eyebrow {
+  text-shadow: 0 2px 16px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.8);
+}
+section.relative p.font-body {
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+}
+
+/* ── Blue inject — stronger royal blue on mobile cards ── */
+@media (max-width: 768px) {
+  .bg-void.p-8, .bg-void.p-10 {
+    background: linear-gradient(135deg, #05080F 0%, #070C18 100%);
+  }
+  /* Orange accent on mobile section borders */
+  section.section-blue-deep,
+  section.section-orange-accent {
+    border-top: 1px solid rgba(255,102,0,0.15);
+    border-bottom: 1px solid rgba(255,102,0,0.10);
+  }
+  section.section-blue-mid {
+    border-top: 1px solid rgba(0,68,170,0.25);
+    border-bottom: 1px solid rgba(0,68,170,0.15);
+  }
+}
