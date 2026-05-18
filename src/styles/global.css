@@ -442,19 +442,19 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
 .orange-ring-fade {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(255,102,0,0.25);
-  animation: ringFadeOut 6s linear infinite;
+  border: 1px solid transparent;
+  animation: ringFadeOut 8s linear infinite;
 }
-.ring-fade-1 { width: 600px; height: 600px; animation-delay: 0s; }
-.ring-fade-2 { width: 600px; height: 600px; animation-delay: 1.7s; }
-.ring-fade-3 { width: 600px; height: 600px; animation-delay: 3.4s; }
+.ring-fade-1 { width: 500px; height: 500px; animation-delay: 0s; }
+.ring-fade-2 { width: 500px; height: 500px; animation-delay: 2.67s; }
+.ring-fade-3 { width: 500px; height: 500px; animation-delay: 5.33s; }
 
 @keyframes ringFadeOut {
-  0%   { opacity: 0; transform: scale(0.8); }
-  10%  { opacity: 0; transform: scale(0.9); }
-  25%  { opacity: 0.35; border-color: rgba(255,102,0,0.25); }
-  85%  { opacity: 0.1; }
-  100% { opacity: 0; transform: scale(2.4); border-color: rgba(255,102,0,0.0); }
+  0%   { opacity: 0; transform: scale(0.6); border-color: transparent; }
+  12%  { opacity: 0; transform: scale(0.7); border-color: transparent; }
+  30%  { opacity: 1; border-color: rgba(255,102,0,0.18); }
+  75%  { opacity: 0.4; border-color: rgba(255,102,0,0.08); }
+  100% { opacity: 0; transform: scale(2.2); border-color: transparent; }
 }
   15%  { opacity: 0.5; border-color: rgba(255,102,0,0.3); }
   100% { opacity: 0; transform: scale(2.2); border-color: rgba(255,102,0,0.0); }
@@ -482,9 +482,9 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
 
   /* Keep orange ring fade on about — smaller */
   .orange-ring-fade { display: block; }
-  .ring-fade-1 { width: 280px; height: 280px; }
-  .ring-fade-2 { width: 280px; height: 280px; }
-  .ring-fade-3 { width: 280px; height: 280px; }
+  .ring-fade-1 { width: 240px; height: 240px; animation-delay: 0s; }
+  .ring-fade-2 { width: 240px; height: 240px; animation-delay: 2.67s; }
+  .ring-fade-3 { width: 240px; height: 240px; animation-delay: 5.33s; }
 
   /* Keep active pulse badge */
   .active-pulse { animation: activePulse 2.5s ease-in-out infinite; }
