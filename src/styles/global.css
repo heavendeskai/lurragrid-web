@@ -146,7 +146,10 @@ nav.scrolled {
   100% { transform: scale(1.0); }
 }
 @keyframes ringPulse {
-  0%   { transform: scale(0.5); opacity: 0.8; border-color: rgba(0,85,204,0.6); }
+  0%   { opacity: 0; transform: scale(0.3); }
+  15%  { opacity: 0.7; }
+  100% { opacity: 0; transform: scale(3.5); }
+}
   70%  { transform: scale(4);   opacity: 0.15; }
   100% { transform: scale(5);   opacity: 0; }
 }
@@ -179,11 +182,11 @@ nav.scrolled {
   position: absolute;
   border-radius: 50%;
   border: 1px solid rgba(0,85,204,0.4);
-  animation: ringPulse 8s ease-out infinite;
+  animation: ringPulse 9s linear infinite;
 }
-.ring-1 { width: 200px; height: 200px; animation-delay: 0s; }
-.ring-2 { width: 200px; height: 200px; animation-delay: 1.3s; }
-.ring-3 { width: 200px; height: 200px; animation-delay: 2.6s; }
+.ring-1 { width: 200px; height: 200px; animation-delay: 0s; animation-duration: 9s; }
+.ring-2 { width: 200px; height: 200px; animation-delay: 3s; animation-duration: 9s; }
+.ring-3 { width: 200px; height: 200px; animation-delay: 6s; animation-duration: 9s; }
 
 .svg-draw line, .svg-draw path, .svg-draw rect, .svg-draw circle, .svg-draw ellipse {
   stroke-dasharray: 1000;
@@ -435,16 +438,16 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
   position: absolute;
   border-radius: 50%;
   border: 1px solid rgba(255,102,0,0.25);
-  animation: ringFadeOut 5s ease-out infinite;
+  animation: ringFadeOut 6s linear infinite;
 }
 .ring-fade-1 { width: 600px; height: 600px; animation-delay: 0s; }
 .ring-fade-2 { width: 600px; height: 600px; animation-delay: 1.7s; }
 .ring-fade-3 { width: 600px; height: 600px; animation-delay: 3.4s; }
 
 @keyframes ringFadeOut {
-  0%   { transform: scale(1);    opacity: 0.5; border-color: rgba(255,102,0,0.25); }
-  60%  { transform: scale(1.6);  opacity: 0.15; }
-  100% { transform: scale(2.0);  opacity: 0; border-color: rgba(255,102,0,0.0); }
+  0%   { opacity: 0; transform: scale(0.8); }
+  15%  { opacity: 0.5; border-color: rgba(255,102,0,0.3); }
+  100% { opacity: 0; transform: scale(2.2); border-color: rgba(255,102,0,0.0); }
 }
 
 @media (max-width: 768px) {
@@ -463,9 +466,9 @@ input, textarea, select { font-size: 16px !important; min-height: 44px; }
   .pulse-ring {
     display: block;
   }
-  .ring-1 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 0s; }
-  .ring-2 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 4s; }
-  .ring-3 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 8s; }
+  .ring-1 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 0s; animation-timing-function: linear; }
+  .ring-2 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 4s; animation-timing-function: linear; }
+  .ring-3 { width: 140px; height: 140px; animation-duration: 12s; animation-delay: 8s; animation-timing-function: linear; }
 
   /* Keep orange ring fade on about — smaller */
   .orange-ring-fade { display: block; }
