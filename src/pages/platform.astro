@@ -6,53 +6,53 @@ import Footer from '../components/Footer.astro';
 const layers = [
   {
     num: '01',
-    name: 'LurraCore',
+    name: 'LURRACORE',
     tag: 'Underground Storage & Dispatch',
-    body: `The mine is the battery. Existing hard rock shafts and cavity networks become upper and lower reservoirs. Water flows from upper to lower through a turbine to generate power. Pumped back up overnight to recharge. No new excavation required. The civil engineering is already done — we commission it.`,
-    detail: `Round-trip efficiency: 80%. Asset life: 50 years. Firm, dispatchable power delivered directly behind the meter to the data center load.`,
+    body: `The mine is the battery. Existing hard rock shafts and cavity networks become upper and lower reservoirs. Water flows from upper to lower through a turbine to generate power, and the turbine runs at all times. On separate independent shafts, a pump train lifts water back while generation continues. No new excavation required. The civil engineering is already done — we commission it.`,
+    detail: `Capacity: 150 MW per node, scaling through additional nodes. Round-trip efficiency: 80%. Asset life: 50 years. Firm power delivered directly behind the meter to the data center load, 24 hours a day, 365 days a year.`,
   },
   {
     num: '02',
-    name: 'LurraCascade',
+    name: 'LURRACASCADE',
     tag: 'Patent-Pending Continuity System',
-    body: `Conventional pumped hydro stops when the upper reservoir empties. LurraCascade eliminates that constraint. A dual-reservoir threshold switching system automatically engages a secondary cascade stage at 20% reservoir level, maintaining uninterrupted power delivery.`,
+    body: `Conventional pumped hydro stops when the upper reservoir empties. LURRACASCADE eliminates that constraint. A dual-reservoir threshold switching system automatically engages a secondary cascade stage at 20% reservoir level, maintaining uninterrupted power delivery.`,
     detail: `Prior art published May 5, 2026, CERN Zenodo, DOI 10.5281/zenodo.20045602. USPTO provisional filing in process. Four independent claims: the method, the system, the BTM data center application, and the automated threshold actuator.`,
     patent: true,
   },
   {
     num: '03',
-    name: 'LurraCharge',
+    name: 'LURRACHARGE',
     tag: 'Curtailed Energy Recharge Layer',
-    body: `Wind and nuclear cannot throttle overnight. Grid operators log millions of megawatt-hours of curtailed generation annually — energy the market cannot absorb. LurraCharge acquires this energy at near-zero or negative cost through negotiated power purchase agreements. The recharge window is 8–10 hours overnight.`,
+    body: `Wind and nuclear cannot throttle overnight. Grid operators log millions of megawatt-hours of curtailed generation annually — energy the market cannot absorb. LURRACHARGE acquires this energy at near-zero or negative cost through negotiated power purchase agreements. That energy drives the pump train, which runs concurrently with generation — sustaining 150 MW of continuous delivery takes roughly 187.5 MW of pumping input at 80% round-trip efficiency.`,
     detail: `MISO territory alone logs over 1.5 million MWh of curtailed wind annually. Negative LMP pricing events are documented and recurring.`,
   },
   {
     num: '04',
-    name: 'LurraBridge',
+    name: 'LURRABRIDGE',
     tag: 'Sub-100ms Frequency Response',
-    body: `An EV battery bridge layer provides sub-100ms frequency response for grid interconnection requirements. LurraBridge handles the instantaneous demand while LurraCore ramps to full output — meeting both the speed of grid ancillary services and the endurance of a 14–16 hour dispatch window.`,
+    body: `An EV battery bridge layer provides sub-100ms frequency response for grid interconnection requirements. LURRABRIDGE handles the instantaneous demand while LURRACORE ramps to full output — meeting both the speed of grid ancillary services and the endurance of 24/7, 365 continuous delivery.`,
     detail: `Critical for BTM data center applications where uninterrupted power is a contractual requirement.`,
   },
   {
     num: '05',
-    name: 'LurraPDA',
+    name: 'LURRAPDA',
     tag: '20-Year Take-or-Pay Power Delivery Agreement',
-    body: `LurraGrid delivers power under long-term Power Delivery Agreements — 20-year take-or-pay contracts negotiated directly with data center operators. The data center commits to taking minimum volumes. LurraGrid commits to firm delivery. Price certainty. Supply certainty. Infrastructure-grade contract structure.`,
-    detail: `Structured as behind-the-meter delivery, avoiding grid interconnection queues. Project-level debt is secured against PDA cash flows — investors never personally guarantee construction debt.`,
+    body: `LURRAGRID delivers power under long-term Power Delivery Agreements — 20-year take-or-pay contracts negotiated directly with data center operators. The data center commits to taking minimum volumes. LURRAGRID commits to firm delivery. Price certainty. Supply certainty. Infrastructure-grade contract structure.`,
+    detail: `Structured as behind-the-meter delivery. The facility interconnects as load rather than entering the generation queue, and a facility with storage can accept a non-firm interconnection that a bare data center cannot.`,
   },
   {
     num: '06',
-    name: 'LurraAtlas',
+    name: 'LURRAATLAS',
     tag: '950 Pre-Screened Sites Across 15 States',
-    body: `Abandoned hard rock mines are not scarce. The United States holds thousands of them across the western and upper midwest mining belts. LurraAtlas is our proprietary site screening database: 950 sites evaluated across 15 states against head, depth, geometry, hydrogeology, transmission access, and proximity to data center demand corridors.`,
+    body: `Abandoned hard rock mines are not scarce. The United States holds thousands of them across the western and upper midwest mining belts. LURRAATLAS is our proprietary site screening database: 950 sites evaluated across 15 states against head, depth, geometry, hydrogeology, transmission access, and proximity to data center demand corridors.`,
     detail: `Screening criteria include: minimum net head 300m, minimum depth 1,000 ft, suitable cavity geometry, proximity to transmission, and viable groundwater management pathway.`,
   },
 ];
 ---
 
 <Base
-  title="Platform — LurraGrid"
-  description="The LurraGrid technology architecture: LurraCore, LurraCascade, LurraCharge, LurraBridge, LurraPDA, and LurraAtlas."
+  title="Platform — LURRAGRID"
+  description="The LURRAGRID technology architecture: LURRACORE, LURRACASCADE, LURRACHARGE, LURRABRIDGE, LURRAPDA, and LURRAATLAS."
 >
   <Nav />
 
@@ -62,7 +62,7 @@ const layers = [
     <div class="absolute inset-0">
       <img
         src="/platform-hero.jpg"
-        alt="LurraCore underground control room"
+        alt="LURRACORE underground control room"
         class="w-full h-full object-cover object-center hero-zoom-platform"
       />
       <!-- Dark overlay — void black at 65% so text pops and brand stays dominant -->
@@ -83,7 +83,7 @@ const layers = [
         THE MINE IS<br />THE BATTERY.
       </h1>
       <p class="font-body text-lg text-frost-dim max-w-xl leading-relaxed animate-fade-up-delay-2">
-        LurraGrid is an energy arbitrage platform: acquire curtailed renewables at near-zero cost, deliver firm dispatchable power at premium behind-the-meter rates. Six integrated layers. One platform.
+        LURRAGRID buys an input commodity and sells an output contract: curtailed renewable energy in, firm behind-the-meter power out under a long-term delivery agreement. Six integrated layers. One platform.
       </p>
     </div>
   </section>
@@ -101,7 +101,7 @@ const layers = [
           Power ready when your racks are.
         </h2>
         <p class="font-body text-lg text-frost-dim leading-relaxed">
-          The grid cannot serve you on your timeline. LurraGrid can. We built the entire model around the data center development cycle.
+          The grid cannot serve you on your timeline. LURRAGRID can. We built the entire model around the data center development cycle.
         </p>
       </div>
 
@@ -120,18 +120,18 @@ const layers = [
         <!-- 2 -->
         <div class="bg-void p-8 md:p-10">
           <div class="w-10 h-1 mb-6" style="background: linear-gradient(90deg, #FF6600, #0044AA);"></div>
-          <h3 class="font-display font-bold text-xl text-frost mb-3">18 Months. Same as You.</h3>
+          <h3 class="font-display font-bold text-xl text-frost mb-3">18 to 24 Months. Same as You.</h3>
           <p class="font-body text-sm text-frost-dim leading-relaxed">
-            A LurraCore mine retrofit takes 18 months from contract to commissioning — exactly the construction timeline of a hyperscale data center. You sign the LurraPDA when you break ground. Power is commissioned when your racks go live.
+            A LURRACORE mine retrofit takes 18 to 24 months from contract to commissioning — the construction timeline of a hyperscale data center. You sign the LURRAPDA when you break ground. Power is commissioned when your racks go live.
           </p>
         </div>
 
         <!-- 3 -->
         <div class="bg-void p-8 md:p-10">
           <div class="w-10 h-1 mb-6" style="background: linear-gradient(90deg, #FF6600, #0044AA);"></div>
-          <h3 class="font-display font-bold text-xl text-frost mb-3">70–100 MW. Firm. Daily.</h3>
+          <h3 class="font-display font-bold text-xl text-frost mb-3">150 MW Per Node. Firm. Continuous.</h3>
           <p class="font-body text-sm text-frost-dim leading-relaxed">
-            LurraCore dispatches 70–100 MW of firm baseload power during your peak operating window — 14 to 16 continuous hours per day. Not intermittent. Not curtailed. Firm, schedulable, behind-the-meter power your operators can count on.
+            LURRACORE delivers 150 MW of firm baseload power per node, 24 hours a day, 365 days a year — and scales through additional nodes. Not intermittent. Not curtailed. Firm, behind-the-meter power your operators can count on every hour of the year.
           </p>
         </div>
 
@@ -140,7 +140,7 @@ const layers = [
           <div class="w-10 h-1 mb-6" style="background: linear-gradient(90deg, #0044AA, #FF6600);"></div>
           <h3 class="font-display font-bold text-xl text-frost mb-3">A Recharge Strategy That Works</h3>
           <p class="font-body text-sm text-frost-dim leading-relaxed">
-            During a 10-hour overnight window, LurraCharge recharges the system through negotiated power purchase agreements targeting off-peak and curtailed generation. The input cost structure is what makes the economics work — and what keeps your power price locked for 20 years.
+            LURRACHARGE feeds the pump train continuously through negotiated power purchase agreements targeting curtailed and off-peak generation, while the turbine keeps delivering. The input cost structure is what makes the economics work — and what keeps your power price locked for 20 years.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ const layers = [
             <div class="space-y-4">
               <div class="flex gap-3 items-start">
                 <span class="w-1.5 h-1.5 bg-royal-light rounded-full mt-2 shrink-0"></span>
-                <p class="font-body text-sm text-frost-dim">No interconnection queue — power delivered directly to your load</p>
+                <p class="font-body text-sm text-frost-dim">Load interconnection rather than a generation queue — and a facility with storage can accept a non-firm interconnection that a bare data center cannot</p>
               </div>
               <div class="flex gap-3 items-start">
                 <span class="w-1.5 h-1.5 bg-royal-light rounded-full mt-2 shrink-0"></span>
@@ -166,11 +166,11 @@ const layers = [
             <div class="space-y-4">
               <div class="flex gap-3 items-start">
                 <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 shrink-0"></span>
-                <p class="font-body text-sm text-frost-dim">No ESG conflict — zero-emission dispatchable power</p>
+                <p class="font-body text-sm text-frost-dim">No fuel, no combustion, no emissions at the node</p>
               </div>
               <div class="flex gap-3 items-start">
                 <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 shrink-0"></span>
-                <p class="font-body text-sm text-frost-dim">20-year price certainty under a take-or-pay LurraPDA</p>
+                <p class="font-body text-sm text-frost-dim">20-year price certainty under a take-or-pay LURRAPDA</p>
               </div>
               <div class="flex gap-3 items-start">
                 <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 shrink-0"></span>
@@ -236,7 +236,7 @@ const layers = [
     <div class="bg-rule p-10 md:p-14">
       <p class="eyebrow">The Physics</p>
       <p class="font-display font-bold text-xl md:text-2xl text-frost leading-snug max-w-3xl">
-        LurraCore is a storage and dispatch machine — not perpetual motion. Every megawatt delivered to the data center requires approximately 1.25 MW of LurraCharge input at 80% round-trip efficiency. The business works because the input-to-output cost spread is four to five times.
+        LURRACORE is a storage and dispatch machine — not perpetual motion. Every megawatt delivered to the data center requires approximately 1.25 MW of LURRACHARGE input at 80% round-trip efficiency. The business works because the input-to-output cost spread is four to five times.
       </p>
     </div>
   </section>
