@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#000000"/>
-  <!-- Blue top half -->
-  <polygon points="24,3 21,3 8,16 12,16 16,16 24,3" fill="#0044AA"/>
-  <!-- Orange bottom half — narrow sharp tip -->
-  <polygon points="10,16 14,16 16,29 22,16 18,16" fill="#FF6600"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="LURRAGRID">
+  <rect width="1024" height="1024" fill="#070B13"/>
+  <g transform="translate(171.0 71.7) scale(0.80424)">
+    <polygon points="842,5 628,242 294,589 514,593 234,933 101,1085 201,921 360,639 2,637 841,6" fill="#1243AE"/>
+    <polygon points="844,5 514,496 515,499 824,499 492,776 95,1092 339,835 577,562 579,559 575,557 384,557 627,244 843,6" fill="#F2722A"/>
+  </g>
 </svg>

@@ -12,6 +12,9 @@ const {
   description = 'LURRAGRID converts abandoned hard rock mines into firm, dispatchable underground power infrastructure for AI compute.',
   ogTitle,
 } = Astro.props;
+
+// Social cards need an absolute URL; Astro.site is set in astro.config.mjs
+const ogImage = new URL('/og-card.png', Astro.site ?? 'https://lurragrid.com').href;
 ---
 
 <!DOCTYPE html>
@@ -27,10 +30,24 @@ const {
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="LURRAGRID" />
-  
-  <!-- Favicon -->
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="LURRAGRID" />
+
+  <!-- Twitter / X social card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Favicon & app icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#070B13" />
+
   <!-- Fonts preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
